@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="test_catch2" errors="0" failures="0" skipped="0" tests="12283" hostname="tbd" time="0.023" timestamp="2026-11-02T12:41:46Z">
+    <properties>
+      <property name="random-seed" value="338922837"/>
+    </properties>
+    <testcase classname="test_catch2.global" name="Lists push and read - OneLinked" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists push and read - Linked" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - OneLinked" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - OneLinked/push_after and push_before" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - OneLinked/pops" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - OneLinked/del_by_value and clear" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - OneLinked/copy and assign" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - OneLinked/serialization" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - Linked" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - Linked/push_after and push_before" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - Linked/pops" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - Linked/del_by_value and clear" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - Linked/copy and assign" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Lists keep neighbours - Linked/serialization" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Stack" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Stack/lifo" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Stack/copy assign clear" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Stack/serialization" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Queue" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Queue/fifo" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Queue/copy assign clear" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Queue/serialization" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Array" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Array/get and set" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Array/insert and erase" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Array/capacity" time="0.001" status="run"/>
+    <testcase classname="test_catch2.global" name="Array/copy and assign" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Array/serialization" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash/insert erase contains" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash/rehash and tombstones" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash/capacity limits" time="0.013" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash/hash functions" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash/copy assign serialize" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Array" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Array/empty round trip" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Array/bad binary" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Array/bad text" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OneLinked" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OneLinked/empty round trip" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OneLinked/bad binary" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OneLinked/bad text" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Linked" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Linked/empty round trip" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Linked/bad binary" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Linked/bad text" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Stack" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Stack/empty round trip" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Stack/bad binary" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Stack/bad text" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Queue" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Queue/empty round trip" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Queue/bad binary" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Queue/bad text" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OpenHash" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OpenHash/empty round trip" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OpenHash/bad binary" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - OpenHash/bad text" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Tree" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Tree/empty round trip" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Tree/bad binary" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization errors - Tree/bad text" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="Complete tree personal variant" time="0.001" status="run"/>
+    <testcase classname="test_catch2.global" name="Both hash methods personal variant" time="0.004" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization IO failures" time="0.003" status="run"/>
+    <system-out/>
+    <system-err/>
+  </testsuite>
+</testsuites>

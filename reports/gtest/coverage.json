@@ -1,0 +1,387 @@
+{
+  "data": [
+    {
+      "files": [
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/array.cpp",
+          "summary": {
+            "branches": {
+              "count": 42,
+              "covered": 41,
+              "notcovered": 1,
+              "percent": 97.61904761904762
+            },
+            "functions": {
+              "count": 22,
+              "covered": 22,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 22,
+              "covered": 22,
+              "percent": 100
+            },
+            "lines": {
+              "count": 134,
+              "covered": 134,
+              "percent": 100
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 93,
+              "covered": 92,
+              "notcovered": 1,
+              "percent": 98.9247311827957
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/linked_list.cpp",
+          "summary": {
+            "branches": {
+              "count": 56,
+              "covered": 56,
+              "notcovered": 0,
+              "percent": 100
+            },
+            "functions": {
+              "count": 27,
+              "covered": 27,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 27,
+              "covered": 27,
+              "percent": 100
+            },
+            "lines": {
+              "count": 170,
+              "covered": 170,
+              "percent": 100
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 117,
+              "covered": 117,
+              "notcovered": 0,
+              "percent": 100
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/one_linked_list.cpp",
+          "summary": {
+            "branches": {
+              "count": 68,
+              "covered": 68,
+              "notcovered": 0,
+              "percent": 100
+            },
+            "functions": {
+              "count": 28,
+              "covered": 28,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 28,
+              "covered": 28,
+              "percent": 100
+            },
+            "lines": {
+              "count": 188,
+              "covered": 188,
+              "percent": 100
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 133,
+              "covered": 133,
+              "notcovered": 0,
+              "percent": 100
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/open_hash.cpp",
+          "summary": {
+            "branches": {
+              "count": 74,
+              "covered": 70,
+              "notcovered": 4,
+              "percent": 94.5945945945946
+            },
+            "functions": {
+              "count": 27,
+              "covered": 27,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 27,
+              "covered": 27,
+              "percent": 100
+            },
+            "lines": {
+              "count": 179,
+              "covered": 177,
+              "percent": 98.88268156424581
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 136,
+              "covered": 132,
+              "notcovered": 4,
+              "percent": 97.05882352941177
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/queue.cpp",
+          "summary": {
+            "branches": {
+              "count": 24,
+              "covered": 24,
+              "notcovered": 0,
+              "percent": 100
+            },
+            "functions": {
+              "count": 17,
+              "covered": 17,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 17,
+              "covered": 17,
+              "percent": 100
+            },
+            "lines": {
+              "count": 92,
+              "covered": 92,
+              "percent": 100
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 59,
+              "covered": 59,
+              "notcovered": 0,
+              "percent": 100
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/serializable.h",
+          "summary": {
+            "branches": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "functions": {
+              "count": 1,
+              "covered": 1,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 1,
+              "covered": 1,
+              "percent": 100
+            },
+            "lines": {
+              "count": 1,
+              "covered": 1,
+              "percent": 100
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 1,
+              "covered": 1,
+              "notcovered": 0,
+              "percent": 100
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/serialize.cpp",
+          "summary": {
+            "branches": {
+              "count": 44,
+              "covered": 41,
+              "notcovered": 3,
+              "percent": 93.18181818181817
+            },
+            "functions": {
+              "count": 15,
+              "covered": 15,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 15,
+              "covered": 15,
+              "percent": 100
+            },
+            "lines": {
+              "count": 105,
+              "covered": 105,
+              "percent": 100
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 72,
+              "covered": 69,
+              "notcovered": 3,
+              "percent": 95.83333333333334
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/stack.cpp",
+          "summary": {
+            "branches": {
+              "count": 24,
+              "covered": 24,
+              "notcovered": 0,
+              "percent": 100
+            },
+            "functions": {
+              "count": 17,
+              "covered": 17,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 17,
+              "covered": 17,
+              "percent": 100
+            },
+            "lines": {
+              "count": 94,
+              "covered": 94,
+              "percent": 100
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 58,
+              "covered": 58,
+              "notcovered": 0,
+              "percent": 100
+            }
+          }
+        },
+        {
+          "filename": "/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/tree.cpp",
+          "summary": {
+            "branches": {
+              "count": 74,
+              "covered": 71,
+              "notcovered": 3,
+              "percent": 95.94594594594594
+            },
+            "functions": {
+              "count": 20,
+              "covered": 20,
+              "percent": 100
+            },
+            "instantiations": {
+              "count": 21,
+              "covered": 20,
+              "percent": 95.23809523809523
+            },
+            "lines": {
+              "count": 127,
+              "covered": 126,
+              "percent": 99.21259842519686
+            },
+            "mcdc": {
+              "count": 0,
+              "covered": 0,
+              "notcovered": 0,
+              "percent": 0
+            },
+            "regions": {
+              "count": 115,
+              "covered": 112,
+              "notcovered": 3,
+              "percent": 97.3913043478261
+            }
+          }
+        }
+      ],
+      "totals": {
+        "branches": {
+          "count": 406,
+          "covered": 395,
+          "notcovered": 11,
+          "percent": 97.29064039408867
+        },
+        "functions": {
+          "count": 174,
+          "covered": 174,
+          "percent": 100
+        },
+        "instantiations": {
+          "count": 175,
+          "covered": 174,
+          "percent": 99.42857142857143
+        },
+        "lines": {
+          "count": 1090,
+          "covered": 1087,
+          "percent": 99.72477064220183
+        },
+        "mcdc": {
+          "count": 0,
+          "covered": 0,
+          "notcovered": 0,
+          "percent": 0
+        },
+        "regions": {
+          "count": 784,
+          "covered": 773,
+          "notcovered": 11,
+          "percent": 98.5969387755102
+        }
+      }
+    }
+  ],
+  "type": "llvm.coverage.json.export",
+  "version": "2.0.1"
+}

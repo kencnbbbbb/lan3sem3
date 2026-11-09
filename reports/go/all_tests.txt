@@ -1,0 +1,2 @@
+?   	laba3/cmd/lab3	[no test files]
+ok  	laba3/ds	0.379s

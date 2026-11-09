@@ -1,0 +1,1 @@
+ok  	laba3/ds	0.822s	coverage: 99.2% of statements

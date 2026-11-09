@@ -1,0 +1,27 @@
+Clang analyzer: array.cpp
+Clang analyzer: linked_list.cpp
+Clang analyzer: one_linked_list.cpp
+Clang analyzer: open_hash.cpp
+Clang analyzer: queue.cpp
+Clang analyzer: serialize.cpp
+Clang analyzer: stack.cpp
+Clang analyzer: tree.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/main.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/array.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/array.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/linked_list.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/linked_list.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/one_linked_list.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/one_linked_list.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/open_hash.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/open_hash.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/queue.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/queue.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/serializable.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/serialize.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/serialize.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/stack.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/stack.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/tree.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/outputs/laba3_variant5/str/tree.h
+PASS: static analysis and configured style checks

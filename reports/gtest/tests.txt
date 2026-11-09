@@ -1,0 +1,321 @@
+Running main() from /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/work/deps3/googletest/googletest/src/gtest_main.cc
+[==========] Running 132 tests from 17 test suites.
+[----------] Global test environment set-up.
+[----------] 10 tests from ArrayTest
+[ RUN      ] ArrayTest.PushAndGet
+[       OK ] ArrayTest.PushAndGet (0 ms)
+[ RUN      ] ArrayTest.GetOutOfRange
+[       OK ] ArrayTest.GetOutOfRange (0 ms)
+[ RUN      ] ArrayTest.Insert
+[       OK ] ArrayTest.Insert (0 ms)
+[ RUN      ] ArrayTest.Set
+[       OK ] ArrayTest.Set (0 ms)
+[ RUN      ] ArrayTest.Erase
+[       OK ] ArrayTest.Erase (0 ms)
+[ RUN      ] ArrayTest.Clear
+[       OK ] ArrayTest.Clear (0 ms)
+[ RUN      ] ArrayTest.CopyIsIndependent
+[       OK ] ArrayTest.CopyIsIndependent (0 ms)
+[ RUN      ] ArrayTest.Assign
+[       OK ] ArrayTest.Assign (0 ms)
+[ RUN      ] ArrayTest.SerializeBinaryRoundTrip
+[       OK ] ArrayTest.SerializeBinaryRoundTrip (0 ms)
+[ RUN      ] ArrayTest.SerializeTextRoundTrip
+[       OK ] ArrayTest.SerializeTextRoundTrip (0 ms)
+[----------] 10 tests from ArrayTest (0 ms total)
+
+[----------] 3 tests from Array
+[ RUN      ] Array.CapacityGrows
+[       OK ] Array.CapacityGrows (0 ms)
+[ RUN      ] Array.ConstructorWithCapacity
+[       OK ] Array.ConstructorWithCapacity (0 ms)
+[ RUN      ] Array.MaxCapacity
+[       OK ] Array.MaxCapacity (1 ms)
+[----------] 3 tests from Array (1 ms total)
+
+[----------] 11 tests from HashTest/0, where TypeParam = OpenHash
+[ RUN      ] HashTest/0.InsertContains
+[       OK ] HashTest/0.InsertContains (0 ms)
+[ RUN      ] HashTest/0.DuplicateInsert
+[       OK ] HashTest/0.DuplicateInsert (0 ms)
+[ RUN      ] HashTest/0.Erase
+[       OK ] HashTest/0.Erase (0 ms)
+[ RUN      ] HashTest/0.Clear
+[       OK ] HashTest/0.Clear (0 ms)
+[ RUN      ] HashTest/0.ManyInsertsRehash
+[       OK ] HashTest/0.ManyInsertsRehash (0 ms)
+[ RUN      ] HashTest/0.EraseThenInsertSameBucket
+[       OK ] HashTest/0.EraseThenInsertSameBucket (0 ms)
+[ RUN      ] HashTest/0.ReadContainsAll
+[       OK ] HashTest/0.ReadContainsAll (0 ms)
+[ RUN      ] HashTest/0.CopyIsIndependent
+[       OK ] HashTest/0.CopyIsIndependent (0 ms)
+[ RUN      ] HashTest/0.Assign
+[       OK ] HashTest/0.Assign (0 ms)
+[ RUN      ] HashTest/0.SerializeBinaryRoundTrip
+[       OK ] HashTest/0.SerializeBinaryRoundTrip (0 ms)
+[ RUN      ] HashTest/0.SerializeTextRoundTrip
+[       OK ] HashTest/0.SerializeTextRoundTrip (0 ms)
+[----------] 11 tests from HashTest/0 (0 ms total)
+
+[----------] 5 tests from OpenHash
+[ RUN      ] OpenHash.CapacityRoundsUp
+[       OK ] OpenHash.CapacityRoundsUp (0 ms)
+[ RUN      ] OpenHash.FindReturnsIndex
+[       OK ] OpenHash.FindReturnsIndex (0 ms)
+[ RUN      ] OpenHash.GrowsAndOverflows
+[       OK ] OpenHash.GrowsAndOverflows (12 ms)
+[ RUN      ] OpenHash.TombstonesTriggerRehash
+[       OK ] OpenHash.TombstonesTriggerRehash (0 ms)
+[ RUN      ] OpenHash.HashFunctions
+[       OK ] OpenHash.HashFunctions (0 ms)
+[----------] 5 tests from OpenHash (12 ms total)
+
+[----------] 2 tests from PersonalVariant
+[ RUN      ] PersonalVariant.BothHashMethods
+[       OK ] PersonalVariant.BothHashMethods (3 ms)
+[ RUN      ] PersonalVariant.SerializationIOFailures
+[       OK ] PersonalVariant.SerializationIOFailures (3 ms)
+[----------] 2 tests from PersonalVariant (6 ms total)
+
+[----------] 18 tests from ListTest/0, where TypeParam = OneLinked
+[ RUN      ] ListTest/0.operations
+[       OK ] ListTest/0.operations (0 ms)
+[ RUN      ] ListTest/0.serdeser_text
+[       OK ] ListTest/0.serdeser_text (0 ms)
+[ RUN      ] ListTest/0.serdeser_binary
+[       OK ] ListTest/0.serdeser_binary (0 ms)
+[ RUN      ] ListTest/0.PushFrontBackRead
+[       OK ] ListTest/0.PushFrontBackRead (0 ms)
+[ RUN      ] ListTest/0.PushOnEmpty
+[       OK ] ListTest/0.PushOnEmpty (0 ms)
+[ RUN      ] ListTest/0.FindMissing
+[       OK ] ListTest/0.FindMissing (0 ms)
+[ RUN      ] ListTest/0.PushAfter
+[       OK ] ListTest/0.PushAfter (0 ms)
+[ RUN      ] ListTest/0.PushBefore
+[       OK ] ListTest/0.PushBefore (0 ms)
+[ RUN      ] ListTest/0.PopFrontBack
+[       OK ] ListTest/0.PopFrontBack (0 ms)
+[ RUN      ] ListTest/0.PopAll
+[       OK ] ListTest/0.PopAll (0 ms)
+[ RUN      ] ListTest/0.PopAfter
+[       OK ] ListTest/0.PopAfter (0 ms)
+[ RUN      ] ListTest/0.PopBefore
+[       OK ] ListTest/0.PopBefore (0 ms)
+[ RUN      ] ListTest/0.DelByValue
+[       OK ] ListTest/0.DelByValue (0 ms)
+[ RUN      ] ListTest/0.Clear
+[       OK ] ListTest/0.Clear (0 ms)
+[ RUN      ] ListTest/0.CopyIsIndependent
+[       OK ] ListTest/0.CopyIsIndependent (0 ms)
+[ RUN      ] ListTest/0.Assign
+[       OK ] ListTest/0.Assign (0 ms)
+[ RUN      ] ListTest/0.SerializeBinaryRoundTrip
+[       OK ] ListTest/0.SerializeBinaryRoundTrip (0 ms)
+[ RUN      ] ListTest/0.SerializeTextRoundTrip
+[       OK ] ListTest/0.SerializeTextRoundTrip (0 ms)
+[----------] 18 tests from ListTest/0 (0 ms total)
+
+[----------] 18 tests from ListTest/1, where TypeParam = Linked
+[ RUN      ] ListTest/1.operations
+[       OK ] ListTest/1.operations (0 ms)
+[ RUN      ] ListTest/1.serdeser_text
+[       OK ] ListTest/1.serdeser_text (0 ms)
+[ RUN      ] ListTest/1.serdeser_binary
+[       OK ] ListTest/1.serdeser_binary (0 ms)
+[ RUN      ] ListTest/1.PushFrontBackRead
+[       OK ] ListTest/1.PushFrontBackRead (0 ms)
+[ RUN      ] ListTest/1.PushOnEmpty
+[       OK ] ListTest/1.PushOnEmpty (0 ms)
+[ RUN      ] ListTest/1.FindMissing
+[       OK ] ListTest/1.FindMissing (0 ms)
+[ RUN      ] ListTest/1.PushAfter
+[       OK ] ListTest/1.PushAfter (0 ms)
+[ RUN      ] ListTest/1.PushBefore
+[       OK ] ListTest/1.PushBefore (0 ms)
+[ RUN      ] ListTest/1.PopFrontBack
+[       OK ] ListTest/1.PopFrontBack (0 ms)
+[ RUN      ] ListTest/1.PopAll
+[       OK ] ListTest/1.PopAll (0 ms)
+[ RUN      ] ListTest/1.PopAfter
+[       OK ] ListTest/1.PopAfter (0 ms)
+[ RUN      ] ListTest/1.PopBefore
+[       OK ] ListTest/1.PopBefore (0 ms)
+[ RUN      ] ListTest/1.DelByValue
+[       OK ] ListTest/1.DelByValue (0 ms)
+[ RUN      ] ListTest/1.Clear
+[       OK ] ListTest/1.Clear (0 ms)
+[ RUN      ] ListTest/1.CopyIsIndependent
+[       OK ] ListTest/1.CopyIsIndependent (0 ms)
+[ RUN      ] ListTest/1.Assign
+[       OK ] ListTest/1.Assign (0 ms)
+[ RUN      ] ListTest/1.SerializeBinaryRoundTrip
+[       OK ] ListTest/1.SerializeBinaryRoundTrip (0 ms)
+[ RUN      ] ListTest/1.SerializeTextRoundTrip
+[       OK ] ListTest/1.SerializeTextRoundTrip (0 ms)
+[----------] 18 tests from ListTest/1 (0 ms total)
+
+[----------] 6 tests from Queue
+[ RUN      ] Queue.FifoOrder
+[       OK ] Queue.FifoOrder (0 ms)
+[ RUN      ] Queue.EmptyThrows
+[       OK ] Queue.EmptyThrows (0 ms)
+[ RUN      ] Queue.Clear
+[       OK ] Queue.Clear (0 ms)
+[ RUN      ] Queue.CopyAndAssign
+[       OK ] Queue.CopyAndAssign (0 ms)
+[ RUN      ] Queue.SerializeBinaryRoundTrip
+[       OK ] Queue.SerializeBinaryRoundTrip (0 ms)
+[ RUN      ] Queue.SerializeTextRoundTrip
+[       OK ] Queue.SerializeTextRoundTrip (0 ms)
+[----------] 6 tests from Queue (0 ms total)
+
+[----------] 7 tests from SerializeErrors/0, where TypeParam = Array
+[ RUN      ] SerializeErrors/0.EmptyRoundTrip
+[       OK ] SerializeErrors/0.EmptyRoundTrip (0 ms)
+[ RUN      ] SerializeErrors/0.BadBinaryTag
+[       OK ] SerializeErrors/0.BadBinaryTag (0 ms)
+[ RUN      ] SerializeErrors/0.TruncatedBinary
+[       OK ] SerializeErrors/0.TruncatedBinary (0 ms)
+[ RUN      ] SerializeErrors/0.HugeBinarySize
+[       OK ] SerializeErrors/0.HugeBinarySize (0 ms)
+[ RUN      ] SerializeErrors/0.BadTextHeader
+[       OK ] SerializeErrors/0.BadTextHeader (0 ms)
+[ RUN      ] SerializeErrors/0.HugeTextSize
+[       OK ] SerializeErrors/0.HugeTextSize (0 ms)
+[ RUN      ] SerializeErrors/0.TruncatedText
+[       OK ] SerializeErrors/0.TruncatedText (0 ms)
+[----------] 7 tests from SerializeErrors/0 (0 ms total)
+
+[----------] 7 tests from SerializeErrors/1, where TypeParam = OneLinked
+[ RUN      ] SerializeErrors/1.EmptyRoundTrip
+[       OK ] SerializeErrors/1.EmptyRoundTrip (0 ms)
+[ RUN      ] SerializeErrors/1.BadBinaryTag
+[       OK ] SerializeErrors/1.BadBinaryTag (0 ms)
+[ RUN      ] SerializeErrors/1.TruncatedBinary
+[       OK ] SerializeErrors/1.TruncatedBinary (0 ms)
+[ RUN      ] SerializeErrors/1.HugeBinarySize
+[       OK ] SerializeErrors/1.HugeBinarySize (0 ms)
+[ RUN      ] SerializeErrors/1.BadTextHeader
+[       OK ] SerializeErrors/1.BadTextHeader (0 ms)
+[ RUN      ] SerializeErrors/1.HugeTextSize
+[       OK ] SerializeErrors/1.HugeTextSize (0 ms)
+[ RUN      ] SerializeErrors/1.TruncatedText
+[       OK ] SerializeErrors/1.TruncatedText (0 ms)
+[----------] 7 tests from SerializeErrors/1 (0 ms total)
+
+[----------] 7 tests from SerializeErrors/2, where TypeParam = Linked
+[ RUN      ] SerializeErrors/2.EmptyRoundTrip
+[       OK ] SerializeErrors/2.EmptyRoundTrip (0 ms)
+[ RUN      ] SerializeErrors/2.BadBinaryTag
+[       OK ] SerializeErrors/2.BadBinaryTag (0 ms)
+[ RUN      ] SerializeErrors/2.TruncatedBinary
+[       OK ] SerializeErrors/2.TruncatedBinary (0 ms)
+[ RUN      ] SerializeErrors/2.HugeBinarySize
+[       OK ] SerializeErrors/2.HugeBinarySize (0 ms)
+[ RUN      ] SerializeErrors/2.BadTextHeader
+[       OK ] SerializeErrors/2.BadTextHeader (0 ms)
+[ RUN      ] SerializeErrors/2.HugeTextSize
+[       OK ] SerializeErrors/2.HugeTextSize (0 ms)
+[ RUN      ] SerializeErrors/2.TruncatedText
+[       OK ] SerializeErrors/2.TruncatedText (0 ms)
+[----------] 7 tests from SerializeErrors/2 (0 ms total)
+
+[----------] 7 tests from SerializeErrors/3, where TypeParam = Stack
+[ RUN      ] SerializeErrors/3.EmptyRoundTrip
+[       OK ] SerializeErrors/3.EmptyRoundTrip (0 ms)
+[ RUN      ] SerializeErrors/3.BadBinaryTag
+[       OK ] SerializeErrors/3.BadBinaryTag (0 ms)
+[ RUN      ] SerializeErrors/3.TruncatedBinary
+[       OK ] SerializeErrors/3.TruncatedBinary (0 ms)
+[ RUN      ] SerializeErrors/3.HugeBinarySize
+[       OK ] SerializeErrors/3.HugeBinarySize (0 ms)
+[ RUN      ] SerializeErrors/3.BadTextHeader
+[       OK ] SerializeErrors/3.BadTextHeader (0 ms)
+[ RUN      ] SerializeErrors/3.HugeTextSize
+[       OK ] SerializeErrors/3.HugeTextSize (0 ms)
+[ RUN      ] SerializeErrors/3.TruncatedText
+[       OK ] SerializeErrors/3.TruncatedText (0 ms)
+[----------] 7 tests from SerializeErrors/3 (0 ms total)
+
+[----------] 7 tests from SerializeErrors/4, where TypeParam = Queue
+[ RUN      ] SerializeErrors/4.EmptyRoundTrip
+[       OK ] SerializeErrors/4.EmptyRoundTrip (0 ms)
+[ RUN      ] SerializeErrors/4.BadBinaryTag
+[       OK ] SerializeErrors/4.BadBinaryTag (0 ms)
+[ RUN      ] SerializeErrors/4.TruncatedBinary
+[       OK ] SerializeErrors/4.TruncatedBinary (0 ms)
+[ RUN      ] SerializeErrors/4.HugeBinarySize
+[       OK ] SerializeErrors/4.HugeBinarySize (0 ms)
+[ RUN      ] SerializeErrors/4.BadTextHeader
+[       OK ] SerializeErrors/4.BadTextHeader (0 ms)
+[ RUN      ] SerializeErrors/4.HugeTextSize
+[       OK ] SerializeErrors/4.HugeTextSize (0 ms)
+[ RUN      ] SerializeErrors/4.TruncatedText
+[       OK ] SerializeErrors/4.TruncatedText (0 ms)
+[----------] 7 tests from SerializeErrors/4 (0 ms total)
+
+[----------] 7 tests from SerializeErrors/5, where TypeParam = OpenHash
+[ RUN      ] SerializeErrors/5.EmptyRoundTrip
+[       OK ] SerializeErrors/5.EmptyRoundTrip (0 ms)
+[ RUN      ] SerializeErrors/5.BadBinaryTag
+[       OK ] SerializeErrors/5.BadBinaryTag (0 ms)
+[ RUN      ] SerializeErrors/5.TruncatedBinary
+[       OK ] SerializeErrors/5.TruncatedBinary (0 ms)
+[ RUN      ] SerializeErrors/5.HugeBinarySize
+[       OK ] SerializeErrors/5.HugeBinarySize (0 ms)
+[ RUN      ] SerializeErrors/5.BadTextHeader
+[       OK ] SerializeErrors/5.BadTextHeader (0 ms)
+[ RUN      ] SerializeErrors/5.HugeTextSize
+[       OK ] SerializeErrors/5.HugeTextSize (0 ms)
+[ RUN      ] SerializeErrors/5.TruncatedText
+[       OK ] SerializeErrors/5.TruncatedText (0 ms)
+[----------] 7 tests from SerializeErrors/5 (0 ms total)
+
+[----------] 7 tests from SerializeErrors/6, where TypeParam = Tree
+[ RUN      ] SerializeErrors/6.EmptyRoundTrip
+[       OK ] SerializeErrors/6.EmptyRoundTrip (0 ms)
+[ RUN      ] SerializeErrors/6.BadBinaryTag
+[       OK ] SerializeErrors/6.BadBinaryTag (0 ms)
+[ RUN      ] SerializeErrors/6.TruncatedBinary
+[       OK ] SerializeErrors/6.TruncatedBinary (0 ms)
+[ RUN      ] SerializeErrors/6.HugeBinarySize
+[       OK ] SerializeErrors/6.HugeBinarySize (0 ms)
+[ RUN      ] SerializeErrors/6.BadTextHeader
+[       OK ] SerializeErrors/6.BadTextHeader (0 ms)
+[ RUN      ] SerializeErrors/6.HugeTextSize
+[       OK ] SerializeErrors/6.HugeTextSize (0 ms)
+[ RUN      ] SerializeErrors/6.TruncatedText
+[       OK ] SerializeErrors/6.TruncatedText (0 ms)
+[----------] 7 tests from SerializeErrors/6 (0 ms total)
+
+[----------] 9 tests from Stack
+[ RUN      ] Stack.CopyIsIndependent
+[       OK ] Stack.CopyIsIndependent (0 ms)
+[ RUN      ] Stack.Assign
+[       OK ] Stack.Assign (0 ms)
+[ RUN      ] Stack.SerializeTextToFile
+[       OK ] Stack.SerializeTextToFile (0 ms)
+[ RUN      ] Stack.LifoOrder
+[       OK ] Stack.LifoOrder (0 ms)
+[ RUN      ] Stack.EmptyThrows
+[       OK ] Stack.EmptyThrows (0 ms)
+[ RUN      ] Stack.CopyManyAndSelfAssign
+[       OK ] Stack.CopyManyAndSelfAssign (0 ms)
+[ RUN      ] Stack.SerializeBinaryRoundTrip
+[       OK ] Stack.SerializeBinaryRoundTrip (0 ms)
+[ RUN      ] Stack.SerializeBinaryToFile
+[       OK ] Stack.SerializeBinaryToFile (0 ms)
+[ RUN      ] Stack.SerializeTextRoundTrip
+[       OK ] Stack.SerializeTextRoundTrip (0 ms)
+[----------] 9 tests from Stack (0 ms total)
+
+[----------] 1 test from CompleteTree
+[ RUN      ] CompleteTree.PersonalVariant
+[       OK ] CompleteTree.PersonalVariant (0 ms)
+[----------] 1 test from CompleteTree (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 132 tests from 17 test suites ran. (23 ms total)
+[  PASSED  ] 132 tests.

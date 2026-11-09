@@ -1,0 +1,260 @@
+Unable to determine clock rate from sysctl: hw.cpufrequency: No such file or directory
+This does not affect benchmark measurements, only the metadata output.
+***WARNING*** Failed to set thread affinity. Estimated CPU frequency may be incorrect.
+2026-11-02T19:41:48+07:00
+Running work/build3/benchmarks
+Run on (10 X 24 MHz CPU s)
+Load Average: 8.44, 6.16, 5.05
+---------------------------------------------------------------------------
+Benchmark                                 Time             CPU   Iterations
+---------------------------------------------------------------------------
+BM_ArrayPushBack/100                    501 ns          500 ns        86030
+BM_ArrayPushBack/100                    471 ns          471 ns        86030
+BM_ArrayPushBack/100                    481 ns          480 ns        86030
+BM_ArrayPushBack/100_mean               485 ns          484 ns            3
+BM_ArrayPushBack/100_median             481 ns          480 ns            3
+BM_ArrayPushBack/100_stddev            15.1 ns         15.1 ns            3
+BM_ArrayPushBack/100_cv                3.11 %          3.11 %             3
+BM_ArrayPushBack/1000                  3813 ns         3808 ns        11003
+BM_ArrayPushBack/1000                  3795 ns         3792 ns        11003
+BM_ArrayPushBack/1000                  3791 ns         3785 ns        11003
+BM_ArrayPushBack/1000_mean             3800 ns         3795 ns            3
+BM_ArrayPushBack/1000_median           3795 ns         3792 ns            3
+BM_ArrayPushBack/1000_stddev           11.8 ns         12.0 ns            3
+BM_ArrayPushBack/1000_cv               0.31 %          0.31 %             3
+BM_ArrayPushBack/10000                48978 ns        48872 ns          864
+BM_ArrayPushBack/10000                49737 ns        49679 ns          864
+BM_ArrayPushBack/10000                48643 ns        48573 ns          864
+BM_ArrayPushBack/10000_mean           49119 ns        49041 ns            3
+BM_ArrayPushBack/10000_median         48978 ns        48872 ns            3
+BM_ArrayPushBack/10000_stddev           561 ns          572 ns            3
+BM_ArrayPushBack/10000_cv              1.14 %          1.17 %             3
+BM_ArrayPushBack_BigO                  0.37 NlgN       0.37 NlgN 
+BM_ArrayPushBack_RMS                      2 %             2 %    
+BM_ArrayInsertFront/100                3635 ns         3634 ns        11942
+BM_ArrayInsertFront/100                3534 ns         3532 ns        11942
+BM_ArrayInsertFront/100                3637 ns         3635 ns        11942
+BM_ArrayInsertFront/100_mean           3602 ns         3600 ns            3
+BM_ArrayInsertFront/100_median         3635 ns         3634 ns            3
+BM_ArrayInsertFront/100_stddev         59.0 ns         59.0 ns            3
+BM_ArrayInsertFront/100_cv             1.64 %          1.64 %             3
+BM_ArrayInsertFront/1000             326128 ns       325467 ns          135
+BM_ArrayInsertFront/1000             317019 ns       316548 ns          135
+BM_ArrayInsertFront/1000             344309 ns       343844 ns          135
+BM_ArrayInsertFront/1000_mean        329152 ns       328620 ns            3
+BM_ArrayInsertFront/1000_median      326128 ns       325467 ns            3
+BM_ArrayInsertFront/1000_stddev       13894 ns        13919 ns            3
+BM_ArrayInsertFront/1000_cv            4.22 %          4.24 %             3
+BM_ArrayInsertFront/10000          36249958 ns     36187000 ns            1
+BM_ArrayInsertFront/10000          34677958 ns     34633000 ns            1
+BM_ArrayInsertFront/10000          35900750 ns     35860000 ns            1
+BM_ArrayInsertFront/10000_mean     35609555 ns     35560000 ns            3
+BM_ArrayInsertFront/10000_median   35900750 ns     35860000 ns            3
+BM_ArrayInsertFront/10000_stddev     825465 ns       819286 ns            3
+BM_ArrayInsertFront/10000_cv           2.32 %          2.30 %             3
+BM_ArrayInsertFront_BigO               0.36 N^2        0.36 N^2  
+BM_ArrayInsertFront_RMS                   3 %             3 %    
+BM_OneLinkedPushBack/100               2156 ns         2155 ns        20872
+BM_OneLinkedPushBack/100               2079 ns         2076 ns        20872
+BM_OneLinkedPushBack/100               2128 ns         2126 ns        20872
+BM_OneLinkedPushBack/100_mean          2121 ns         2119 ns            3
+BM_OneLinkedPushBack/100_median        2128 ns         2126 ns            3
+BM_OneLinkedPushBack/100_stddev        38.9 ns         39.7 ns            3
+BM_OneLinkedPushBack/100_cv            1.84 %          1.88 %             3
+BM_OneLinkedPushBack/1000             19765 ns        19724 ns         2033
+BM_OneLinkedPushBack/1000             20121 ns        20099 ns         2033
+BM_OneLinkedPushBack/1000             21232 ns        21194 ns         2033
+BM_OneLinkedPushBack/1000_mean        20372 ns        20339 ns            3
+BM_OneLinkedPushBack/1000_median      20121 ns        20099 ns            3
+BM_OneLinkedPushBack/1000_stddev        765 ns          764 ns            3
+BM_OneLinkedPushBack/1000_cv           3.76 %          3.75 %             3
+BM_OneLinkedPushBack_BigO             20.38 N         20.35 N    
+BM_OneLinkedPushBack_RMS                  4 %             4 %    
+BM_OneLinkedPopBack/100                7230 ns         7220 ns         5901
+BM_OneLinkedPopBack/100                7161 ns         7153 ns         5901
+BM_OneLinkedPopBack/100                7353 ns         7353 ns         5901
+BM_OneLinkedPopBack/100_mean           7248 ns         7242 ns            3
+BM_OneLinkedPopBack/100_median         7230 ns         7220 ns            3
+BM_OneLinkedPopBack/100_stddev         97.3 ns          102 ns            3
+BM_OneLinkedPopBack/100_cv             1.34 %          1.41 %             3
+BM_OneLinkedPopBack/1000             437731 ns       437394 ns           94
+BM_OneLinkedPopBack/1000             437767 ns       437436 ns           94
+BM_OneLinkedPopBack/1000             438056 ns       436862 ns           94
+BM_OneLinkedPopBack/1000_mean        437852 ns       437230 ns            3
+BM_OneLinkedPopBack/1000_median      437767 ns       437394 ns            3
+BM_OneLinkedPopBack/1000_stddev         178 ns          320 ns            3
+BM_OneLinkedPopBack/1000_cv            0.04 %          0.07 %             3
+BM_OneLinkedPopBack/10000          66327708 ns     66256000 ns            1
+BM_OneLinkedPopBack/10000          74432291 ns     74345000 ns            1
+BM_OneLinkedPopBack/10000          63458791 ns     63243000 ns            1
+BM_OneLinkedPopBack/10000_mean     68072930 ns     67948000 ns            3
+BM_OneLinkedPopBack/10000_median   66327708 ns     66256000 ns            3
+BM_OneLinkedPopBack/10000_stddev    5691114 ns      5741145 ns            3
+BM_OneLinkedPopBack/10000_cv           8.36 %          8.45 %             3
+BM_OneLinkedPopBack_BigO               0.68 N^2        0.68 N^2  
+BM_OneLinkedPopBack_RMS                  12 %            12 %    
+BM_LinkedPushBack/100                  1989 ns         1986 ns        20144
+BM_LinkedPushBack/100                  2120 ns         2112 ns        20144
+BM_LinkedPushBack/100                  1899 ns         1895 ns        20144
+BM_LinkedPushBack/100_mean             2003 ns         1997 ns            3
+BM_LinkedPushBack/100_median           1989 ns         1986 ns            3
+BM_LinkedPushBack/100_stddev            111 ns          109 ns            3
+BM_LinkedPushBack/100_cv               5.54 %          5.46 %             3
+BM_LinkedPushBack/1000                20287 ns        20247 ns         2183
+BM_LinkedPushBack/1000                19240 ns        19187 ns         2183
+BM_LinkedPushBack/1000                20231 ns        20173 ns         2183
+BM_LinkedPushBack/1000_mean           19919 ns        19869 ns            3
+BM_LinkedPushBack/1000_median         20231 ns        20173 ns            3
+BM_LinkedPushBack/1000_stddev           589 ns          591 ns            3
+BM_LinkedPushBack/1000_cv              2.96 %          2.98 %             3
+BM_LinkedPushBack_BigO                19.92 N         19.87 N    
+BM_LinkedPushBack_RMS                     3 %             3 %    
+BM_LinkedPopBack/100                   1561 ns         1557 ns        24964
+BM_LinkedPopBack/100                   1536 ns         1531 ns        24964
+BM_LinkedPopBack/100                   1630 ns         1625 ns        24964
+BM_LinkedPopBack/100_mean              1576 ns         1571 ns            3
+BM_LinkedPopBack/100_median            1561 ns         1557 ns            3
+BM_LinkedPopBack/100_stddev            49.0 ns         48.6 ns            3
+BM_LinkedPopBack/100_cv                3.11 %          3.09 %             3
+BM_LinkedPopBack/1000                 11795 ns        11750 ns         3553
+BM_LinkedPopBack/1000                 11899 ns        11869 ns         3553
+BM_LinkedPopBack/1000                 11577 ns        11511 ns         3553
+BM_LinkedPopBack/1000_mean            11757 ns        11710 ns            3
+BM_LinkedPopBack/1000_median          11795 ns        11750 ns            3
+BM_LinkedPopBack/1000_stddev            164 ns          183 ns            3
+BM_LinkedPopBack/1000_cv               1.40 %          1.56 %             3
+BM_LinkedPopBack_BigO                 11.80 N         11.75 N    
+BM_LinkedPopBack_RMS                      4 %             5 %    
+BM_StackPushPop/100                    2017 ns         2011 ns        20649
+BM_StackPushPop/100                    2150 ns         2143 ns        20649
+BM_StackPushPop/100                    2145 ns         2139 ns        20649
+BM_StackPushPop/100_mean               2104 ns         2098 ns            3
+BM_StackPushPop/100_median             2145 ns         2139 ns            3
+BM_StackPushPop/100_stddev             75.4 ns         75.1 ns            3
+BM_StackPushPop/100_cv                 3.58 %          3.58 %             3
+BM_StackPushPop/1000                  22028 ns        21979 ns         1971
+BM_StackPushPop/1000                  20779 ns        20754 ns         1971
+BM_StackPushPop/1000                  23784 ns        23743 ns         1971
+BM_StackPushPop/1000_mean             22197 ns        22159 ns            3
+BM_StackPushPop/1000_median           22028 ns        21979 ns            3
+BM_StackPushPop/1000_stddev            1510 ns         1503 ns            3
+BM_StackPushPop/1000_cv                6.80 %          6.78 %             3
+BM_StackPushPop_BigO                  22.19 N         22.15 N    
+BM_StackPushPop_RMS                       7 %             7 %    
+BM_QueuePushPop/100                    2240 ns         2238 ns        19654
+BM_QueuePushPop/100                    2127 ns         2123 ns        19654
+BM_QueuePushPop/100                    2125 ns         2122 ns        19654
+BM_QueuePushPop/100_mean               2164 ns         2161 ns            3
+BM_QueuePushPop/100_median             2127 ns         2123 ns            3
+BM_QueuePushPop/100_stddev             65.8 ns         66.6 ns            3
+BM_QueuePushPop/100_cv                 3.04 %          3.08 %             3
+BM_QueuePushPop/1000                  20537 ns        20508 ns         2133
+BM_QueuePushPop/1000                  22215 ns        22185 ns         2133
+BM_QueuePushPop/1000                  21495 ns        21458 ns         2133
+BM_QueuePushPop/1000_mean             21415 ns        21383 ns            3
+BM_QueuePushPop/1000_median           21495 ns        21458 ns            3
+BM_QueuePushPop/1000_stddev             842 ns          841 ns            3
+BM_QueuePushPop/1000_cv                3.93 %          3.93 %             3
+BM_QueuePushPop_BigO                  21.42 N         21.39 N    
+BM_QueuePushPop_RMS                       4 %             4 %    
+BM_OpenHashInsert/100                  3429 ns         3426 ns        12079
+BM_OpenHashInsert/100                  3438 ns         3429 ns        12079
+BM_OpenHashInsert/100                  3444 ns         3441 ns        12079
+BM_OpenHashInsert/100_mean             3437 ns         3432 ns            3
+BM_OpenHashInsert/100_median           3438 ns         3429 ns            3
+BM_OpenHashInsert/100_stddev           7.56 ns         7.68 ns            3
+BM_OpenHashInsert/100_cv               0.22 %          0.22 %             3
+BM_OpenHashInsert/1000                36860 ns        36841 ns         1163
+BM_OpenHashInsert/1000                37929 ns        37832 ns         1163
+BM_OpenHashInsert/1000                37775 ns        37725 ns         1163
+BM_OpenHashInsert/1000_mean           37522 ns        37466 ns            3
+BM_OpenHashInsert/1000_median         37775 ns        37725 ns            3
+BM_OpenHashInsert/1000_stddev           578 ns          544 ns            3
+BM_OpenHashInsert/1000_cv              1.54 %          1.45 %             3
+BM_OpenHashInsert/10000              419771 ns       419313 ns           99
+BM_OpenHashInsert/10000              423830 ns       423293 ns           99
+BM_OpenHashInsert/10000              432984 ns       432111 ns           99
+BM_OpenHashInsert/10000_mean         425528 ns       424906 ns            3
+BM_OpenHashInsert/10000_median       423830 ns       423293 ns            3
+BM_OpenHashInsert/10000_stddev         6768 ns         6550 ns            3
+BM_OpenHashInsert/10000_cv             1.59 %          1.54 %             3
+BM_OpenHashInsert_BigO                42.50 N         42.44 N    
+BM_OpenHashInsert_RMS                     3 %             3 %    
+BM_OpenHashContains/100                 784 ns          783 ns        53606
+BM_OpenHashContains/100                 766 ns          765 ns        53606
+BM_OpenHashContains/100                 786 ns          784 ns        53606
+BM_OpenHashContains/100_mean            778 ns          777 ns            3
+BM_OpenHashContains/100_median          784 ns          783 ns            3
+BM_OpenHashContains/100_stddev         11.0 ns         10.9 ns            3
+BM_OpenHashContains/100_cv             1.42 %          1.40 %             3
+BM_OpenHashContains/1000              13075 ns        13057 ns         3140
+BM_OpenHashContains/1000              13277 ns        13262 ns         3140
+BM_OpenHashContains/1000              13058 ns        13049 ns         3140
+BM_OpenHashContains/1000_mean         13137 ns        13123 ns            3
+BM_OpenHashContains/1000_median       13075 ns        13057 ns            3
+BM_OpenHashContains/1000_stddev         122 ns          121 ns            3
+BM_OpenHashContains/1000_cv            0.93 %          0.92 %             3
+BM_OpenHashContains/10000            167073 ns       166795 ns          249
+BM_OpenHashContains/10000            169766 ns       169663 ns          249
+BM_OpenHashContains/10000            169056 ns       168851 ns          249
+BM_OpenHashContains/10000_mean       168632 ns       168436 ns            3
+BM_OpenHashContains/10000_median     169056 ns       168851 ns            3
+BM_OpenHashContains/10000_stddev       1396 ns         1478 ns            3
+BM_OpenHashContains/10000_cv           0.83 %          0.88 %             3
+BM_OpenHashContains_BigO               1.27 NlgN       1.27 NlgN 
+BM_OpenHashContains_RMS                   1 %             1 %    
+BM_TreeInsert/100                     11932 ns        11921 ns         3542
+BM_TreeInsert/100                     12416 ns        12405 ns         3542
+BM_TreeInsert/100                     12389 ns        12375 ns         3542
+BM_TreeInsert/100_mean                12245 ns        12234 ns            3
+BM_TreeInsert/100_median              12389 ns        12375 ns            3
+BM_TreeInsert/100_stddev                272 ns          271 ns            3
+BM_TreeInsert/100_cv                   2.22 %          2.22 %             3
+BM_TreeInsert/1000                   611353 ns       611294 ns           68
+BM_TreeInsert/1000                   618874 ns       618118 ns           68
+BM_TreeInsert/1000                   662296 ns       660868 ns           68
+BM_TreeInsert/1000_mean              630841 ns       630093 ns            3
+BM_TreeInsert/1000_median            618874 ns       618118 ns            3
+BM_TreeInsert/1000_stddev             27499 ns        26869 ns            3
+BM_TreeInsert/1000_cv                  4.36 %          4.26 %             3
+BM_TreeInsert_BigO                     0.63 N^2        0.63 N^2  
+BM_TreeInsert_RMS                         5 %             5 %    
+BM_TreeMember/100                     17306 ns        17295 ns         2326
+BM_TreeMember/100                     17132 ns        17116 ns         2326
+BM_TreeMember/100                     17672 ns        17653 ns         2326
+BM_TreeMember/100_mean                17370 ns        17355 ns            3
+BM_TreeMember/100_median              17306 ns        17295 ns            3
+BM_TreeMember/100_stddev                276 ns          274 ns            3
+BM_TreeMember/100_cv                   1.59 %          1.58 %             3
+BM_TreeMember/1000                  1307702 ns      1306188 ns           32
+BM_TreeMember/1000                  1301932 ns      1300594 ns           32
+BM_TreeMember/1000                  1305747 ns      1303531 ns           32
+BM_TreeMember/1000_mean             1305127 ns      1303437 ns            3
+BM_TreeMember/1000_median           1305747 ns      1303531 ns            3
+BM_TreeMember/1000_stddev              2934 ns         2798 ns            3
+BM_TreeMember/1000_cv                  0.22 %          0.21 %             3
+BM_TreeMember_BigO                     1.31 N^2        1.30 N^2  
+BM_TreeMember_RMS                         1 %             1 %    
+BM_LinearHashInsert/100                3388 ns         3386 ns        12478
+BM_LinearHashInsert/100                3407 ns         3405 ns        12478
+BM_LinearHashInsert/100                3406 ns         3404 ns        12478
+BM_LinearHashInsert/100_mean           3400 ns         3398 ns            3
+BM_LinearHashInsert/100_median         3406 ns         3404 ns            3
+BM_LinearHashInsert/100_stddev         10.9 ns         10.9 ns            3
+BM_LinearHashInsert/100_cv             0.32 %          0.32 %             3
+BM_LinearHashInsert/1000             173727 ns       173609 ns          243
+BM_LinearHashInsert/1000             173794 ns       173695 ns          243
+BM_LinearHashInsert/1000             173985 ns       173704 ns          243
+BM_LinearHashInsert/1000_mean        173835 ns       173669 ns            3
+BM_LinearHashInsert/1000_median      173794 ns       173695 ns            3
+BM_LinearHashInsert/1000_stddev         134 ns         52.4 ns            3
+BM_LinearHashInsert/1000_cv            0.08 %          0.03 %             3
+BM_LinearHashInsert/10000           1085747 ns      1084179 ns           39
+BM_LinearHashInsert/10000           1077348 ns      1076872 ns           39
+BM_LinearHashInsert/10000           1086493 ns      1085615 ns           39
+BM_LinearHashInsert/10000_mean      1083196 ns      1082222 ns            3
+BM_LinearHashInsert/10000_median    1085747 ns      1084179 ns            3
+BM_LinearHashInsert/10000_stddev       5078 ns         4689 ns            3
+BM_LinearHashInsert/10000_cv           0.47 %          0.43 %             3
+BM_LinearHashInsert_BigO             108.96 N        108.86 N    
+BM_LinearHashInsert_RMS                   9 %             9 %    

@@ -1,0 +1,74 @@
+{
+  "gtest": {
+    "lines": {
+      "count": 1090,
+      "covered": 1087,
+      "percent": 99.72477064220183
+    },
+    "functions": {
+      "count": 174,
+      "covered": 174,
+      "percent": 100
+    },
+    "branches": {
+      "count": 406,
+      "covered": 395,
+      "notcovered": 11,
+      "percent": 97.29064039408867
+    },
+    "regions": {
+      "count": 784,
+      "covered": 773,
+      "notcovered": 11,
+      "percent": 98.5969387755102
+    }
+  },
+  "boost": {
+    "lines": {
+      "count": 1090,
+      "covered": 1084,
+      "percent": 99.44954128440368
+    },
+    "functions": {
+      "count": 174,
+      "covered": 173,
+      "percent": 99.42528735632183
+    },
+    "branches": {
+      "count": 406,
+      "covered": 394,
+      "notcovered": 12,
+      "percent": 97.04433497536947
+    },
+    "regions": {
+      "count": 784,
+      "covered": 771,
+      "notcovered": 13,
+      "percent": 98.34183673469387
+    }
+  },
+  "catch2": {
+    "lines": {
+      "count": 1090,
+      "covered": 1084,
+      "percent": 99.44954128440368
+    },
+    "functions": {
+      "count": 174,
+      "covered": 173,
+      "percent": 99.42528735632183
+    },
+    "branches": {
+      "count": 406,
+      "covered": 394,
+      "notcovered": 12,
+      "percent": 97.04433497536947
+    },
+    "regions": {
+      "count": 784,
+      "covered": 771,
+      "notcovered": 13,
+      "percent": 98.34183673469387
+    }
+  }
+}
