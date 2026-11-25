@@ -1,3 +1,0 @@
-gtest: 99.72% lines
-boost: 99.45% lines
-catch2: 99.45% lines

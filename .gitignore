@@ -4,3 +4,8 @@
 *.profdata
 .DS_Store
 __pycache__/
+
+# Generated files from Google Test
+/linked_test.txt
+/linked_test_binary.txt
+/stack_test.txt
