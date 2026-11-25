@@ -1,0 +1,157 @@
+classDiagram
+class Serializable {
+ <<abstract>>
+ +~Serializable()
+ +serialize_binary(ostream) const*
+ +deserialize_binary(istream)*
+ +serialize_text(ostream) const*
+ +deserialize_text(istream)*
+}
+class Array {
+ -size_t sz
+ -size_t cap
+ -string* data
+ +Array()
+ +Array(size_t)
+ +Array(Array)
+ +operator=(Array)
+ +~Array()
+ +push_back(string)
+ +insert(size_t,string)
+ +get(size_t) string
+ +set(size_t,string)
+ +erase(size_t)
+ +clear()
+ +length() size_t
+ +capacity() size_t
+ +empty() bool
+ +read() string
+}
+class OneLinked {
+ -Node* head
+ -Node* tail
+ -size_t sz
+ +push_back(string)
+ +push_front(string)
+ +push_after(string,string)
+ +push_before(string,string)
+ +pop_front() string
+ +pop_back() string
+ +pop_after(string) string
+ +pop_before(string) string
+ +del_by_value(string) bool
+ +find(string) int
+ +size() size_t
+ +empty() bool
+ +clear()
+ +read() string
+ +read_reverse() string
+}
+class Linked {
+ -Node* head
+ -Node* tail
+ -size_t sz
+ +push_back(string)
+ +push_front(string)
+ +push_after(string,string)
+ +push_before(string,string)
+ +pop_front() string
+ +pop_back() string
+ +pop_after(string) string
+ +pop_before(string) string
+ +del_by_value(string) bool
+ +find(string) int
+ +size() size_t
+ +empty() bool
+ +clear()
+ +read() string
+ +read_reverse() string
+}
+class Stack {
+ -Node* head
+ -size_t sz
+ +push(string)
+ +pop() string
+ +top() string
+ +clear()
+ +size() size_t
+ +empty() bool
+ +read() string
+}
+class Queue {
+ -Node* head
+ -Node* tail
+ -size_t sz
+ +push(string)
+ +pop() string
+ +front() string
+ +clear()
+ +size() size_t
+ +empty() bool
+ +read() string
+}
+class OpenHash {
+ -Node* nodes
+ -size_t sz
+ -size_t deleted
+ -size_t cap
+ -ProbeMode mode
+ +OpenHash(size_t,ProbeMode)
+ +method() ProbeMode
+ +insert(string) bool
+ +erase(string) bool
+ +find(string) int
+ +contains(string) bool
+ +clear()
+ +size() size_t
+ +capacity() size_t
+ +empty() bool
+ +read() string
+ +hash_djb2(string) size_t$
+ +hash_fnv1a(string) size_t$
+}
+class ProbeMode {
+ <<enumeration>>
+ Linear
+ Double
+}
+class Tree {
+ -Node* root
+ -size_t sz
+ +Tree()
+ +Tree(Tree)
+ +operator=(Tree)
+ +~Tree()
+ +insert(int) bool
+ +is_member(int) bool
+ +is_complete() bool
+ +clear()
+ +size() size_t
+ +empty() bool
+ +height() int
+ +read() string
+ +structure() string
+ +print(ostream)
+}
+class LinkedNode {
+ -string data
+ -LinkedNode* next
+ -LinkedNode* prev
+}
+class TreeNode {
+ -int data
+ -TreeNode* left
+ -TreeNode* right
+}
+Serializable <|-- Array
+Serializable <|-- OneLinked
+Serializable <|-- Linked
+Serializable <|-- Stack
+Serializable <|-- Queue
+Serializable <|-- OpenHash
+Serializable <|-- Tree
+Linked "1" *-- "0..*" LinkedNode : private Node
+Tree "1" *-- "0..*" TreeNode : private Node
+OpenHash --> ProbeMode
+note for Tree "Complete Binary Tree: BFS insert, duplicates allowed; no AVL/BST erase"
+note for Serializable "All derived classes implement all four serialization methods"

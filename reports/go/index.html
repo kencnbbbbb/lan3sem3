@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>ds: Go Coverage Report</title>
+		<title>lab3: Go Coverage Report</title>
 		<style>
 			body {
 				background: black;
@@ -55,19 +55,21 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">laba3/ds/array.go (98.7%)</option>
+				<option value="file0">laba3/cmd/lab3/main.go (85.1%)</option>
 				
-				<option value="file1">laba3/ds/hash.go (99.1%)</option>
+				<option value="file1">laba3/ds/array.go (98.7%)</option>
 				
-				<option value="file2">laba3/ds/linked_list.go (100.0%)</option>
+				<option value="file2">laba3/ds/hash.go (99.1%)</option>
 				
-				<option value="file3">laba3/ds/one_linked_list.go (99.2%)</option>
+				<option value="file3">laba3/ds/linked_list.go (100.0%)</option>
 				
-				<option value="file4">laba3/ds/serialize.go (98.8%)</option>
+				<option value="file4">laba3/ds/one_linked_list.go (99.2%)</option>
 				
-				<option value="file5">laba3/ds/stack_queue.go (100.0%)</option>
+				<option value="file5">laba3/ds/serialize.go (98.8%)</option>
 				
-				<option value="file6">laba3/ds/tree.go (99.2%)</option>
+				<option value="file6">laba3/ds/stack_queue.go (100.0%)</option>
+				
+				<option value="file7">laba3/ds/tree.go (99.2%)</option>
 				
 				</select>
 			</div>
@@ -90,7 +92,156 @@
 		</div>
 		<div id="content">
 		
-		<pre class="file" id="file0" style="display: none">package ds
+		<pre class="file" id="file0" style="display: none">package main
+
+import (
+        "bufio"
+        "fmt"
+        "io"
+        "laba3/ds"
+        "os"
+        "path/filepath"
+        "strings"
+)
+
+func create(kind string) (ds.Serializer, error) <span class="cov9" title="34">{
+        switch kind </span>{
+        case "Array":<span class="cov4" title="5">
+                return ds.NewArray(0)</span>
+        case "OneLinked":<span class="cov4" title="4">
+                return &amp;ds.OneLinked{}, nil</span>
+        case "Linked":<span class="cov4" title="4">
+                return &amp;ds.Linked{}, nil</span>
+        case "Stack":<span class="cov4" title="4">
+                return &amp;ds.Stack{}, nil</span>
+        case "Queue":<span class="cov4" title="4">
+                return &amp;ds.Queue{}, nil</span>
+        case "OpenHash":<span class="cov4" title="4">
+                return ds.NewOpenHash(0)</span>
+        case "LinearHash":<span class="cov4" title="4">
+                return ds.NewLinearHash(0)</span>
+        case "Tree":<span class="cov4" title="4">
+                return &amp;ds.Tree{}, nil</span>
+        }
+        <span class="cov1" title="1">return nil, fmt.Errorf("неизвестный тип структуры")</span>
+}
+func write(obj ds.Serializer, format, path string) error <span class="cov9" title="32">{
+        if format != "text" &amp;&amp; format != "binary" </span><span class="cov0" title="0">{
+                return fmt.Errorf("формат: text или binary")
+        }</span>
+        <span class="cov9" title="32">f, e := os.Create(path)
+        if e != nil </span><span class="cov0" title="0">{
+                return e
+        }</span>
+        <span class="cov9" title="32">if format == "binary" </span><span class="cov7" title="16">{
+                e = obj.SerializeBinary(f)
+        }</span> else<span class="cov7" title="16"> {
+                e = obj.SerializeText(f)
+        }</span>
+        <span class="cov9" title="32">closeErr := f.Close()
+        if e != nil </span><span class="cov0" title="0">{
+                return e
+        }</span>
+        <span class="cov9" title="32">return closeErr</span>
+}
+func convert(kind, from, input, to, output string) error <span class="cov9" title="35">{
+        if (from != "text" &amp;&amp; from != "binary") || (to != "text" &amp;&amp; to != "binary") </span><span class="cov1" title="1">{
+                return fmt.Errorf("формат: text или binary")
+        }</span>
+        <span class="cov9" title="34">obj, e := create(kind)
+        if e != nil </span><span class="cov1" title="1">{
+                return e
+        }</span>
+        <span class="cov9" title="33">f, e := os.Open(input)
+        if e != nil </span><span class="cov1" title="1">{
+                return e
+        }</span>
+        <span class="cov9" title="32">defer f.Close()
+        r := bufio.NewReader(f)
+        if from == "binary" </span><span class="cov8" title="24">{
+                e = obj.DeserializeBinary(r)
+        }</span> else<span class="cov6" title="8"> {
+                e = obj.DeserializeText(r)
+        }</span>
+        <span class="cov9" title="32">if e != nil </span><span class="cov6" title="8">{
+                return e
+        }</span>
+        <span class="cov8" title="24">rest, e := io.ReadAll(r)
+        if e != nil </span><span class="cov0" title="0">{
+                return e
+        }</span>
+        <span class="cov8" title="24">if from == "text" </span><span class="cov6" title="8">{
+                rest = []byte(strings.TrimSpace(string(rest)))
+        }</span>
+        <span class="cov8" title="24">if len(rest) &gt; 0 </span><span class="cov6" title="8">{
+                return fmt.Errorf("лишние данные после структуры")
+        }</span>
+        <span class="cov7" title="16">return write(obj, to, output)</span>
+}
+func demo(dir string) error <span class="cov1" title="1">{
+        if e := os.MkdirAll(dir, 0755); e != nil </span><span class="cov0" title="0">{
+                return e
+        }</span>
+        <span class="cov1" title="1">a, _ := ds.NewArray(0)
+        one := &amp;ds.OneLinked{}
+        two := &amp;ds.Linked{}
+        stack := &amp;ds.Stack{}
+        queue := &amp;ds.Queue{}
+        hash, _ := ds.NewOpenHash(0)
+        linear, _ := ds.NewLinearHash(0)
+        tree := &amp;ds.Tree{}
+        for _, v := range []string{"alpha", "two words", "", "q\"uote", "Привет"} </span><span class="cov4" title="5">{
+                if e := a.PushBack(v); e != nil </span><span class="cov0" title="0">{
+                        return e
+                }</span>
+                <span class="cov4" title="5">one.PushBack(v)
+                two.PushBack(v)
+                stack.Push(v)
+                queue.Push(v)
+                if _, e := hash.Insert(v); e != nil </span><span class="cov0" title="0">{
+                        return e
+                }</span>
+                <span class="cov4" title="5">if _, e := linear.Insert(v); e != nil </span><span class="cov0" title="0">{
+                        return e
+                }</span>
+        }
+        <span class="cov1" title="1">for _, v := range []int{5, 3, 8, 3, -7, 0, 11, 5} </span><span class="cov6" title="8">{
+                tree.Insert(v)
+        }</span>
+        <span class="cov1" title="1">objects := map[string]ds.Serializer{"Array": a, "OneLinked": one, "Linked": two, "Stack": stack, "Queue": queue, "OpenHash": hash, "LinearHash": linear, "Tree": tree}
+        for name, obj := range objects </span><span class="cov6" title="8">{
+                if e := write(obj, "text", filepath.Join(dir, name+".txt")); e != nil </span><span class="cov0" title="0">{
+                        return e
+                }</span>
+                <span class="cov6" title="8">if e := write(obj, "binary", filepath.Join(dir, name+".bin")); e != nil </span><span class="cov0" title="0">{
+                        return e
+                }</span>
+        }
+        <span class="cov1" title="1">fmt.Println("Созданы текстовые и бинарные примеры для 8 структур")
+        return nil</span>
+}
+func run(args []string) error <span class="cov10" title="38">{
+        if len(args) == 2 &amp;&amp; args[0] == "--demo" </span><span class="cov1" title="1">{
+                return demo(args[1])
+        }</span>
+        <span class="cov9" title="37">if len(args) == 6 &amp;&amp; args[0] == "--convert" </span><span class="cov9" title="35">{
+                return convert(args[1], args[2], args[3], args[4], args[5])
+        }</span>
+        <span class="cov2" title="2">if len(args) == 0 || (len(args) == 1 &amp;&amp; args[0] == "--help") </span><span class="cov1" title="1">{
+                fmt.Println("lab3 --demo папка\nlab3 --convert Тип text|binary вход text|binary выход")
+                return nil
+        }</span>
+        <span class="cov1" title="1">return fmt.Errorf("неверные параметры; используйте --help")</span>
+}
+func main() <span class="cov0" title="0">{
+        if e := run(os.Args[1:]); e != nil </span><span class="cov0" title="0">{
+                fmt.Fprintln(os.Stderr, "Ошибка:", e)
+                os.Exit(1)
+        }</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package ds
 
 import (
         "bufio"
@@ -264,7 +415,7 @@ func (a *Array) replace(items []string) error <span class="cov2" title="4">{
 }
 </pre>
 		
-		<pre class="file" id="file1" style="display: none">package ds
+		<pre class="file" id="file2" style="display: none">package ds
 
 import (
         "bufio"
@@ -504,7 +655,7 @@ func (h *OpenHash) textTag() string <span class="cov3" title="72">{
 }
 </pre>
 		
-		<pre class="file" id="file2" style="display: none">package ds
+		<pre class="file" id="file3" style="display: none">package ds
 
 import (
         "bufio"
@@ -723,7 +874,7 @@ func (l *Linked) replace(items []string) <span class="cov3" title="4">{
 }
 </pre>
 		
-		<pre class="file" id="file3" style="display: none">package ds
+		<pre class="file" id="file4" style="display: none">package ds
 
 import (
         "bufio"
@@ -962,7 +1113,7 @@ func reversed(items []string) []string <span class="cov7" title="62">{
 }
 </pre>
 		
-		<pre class="file" id="file4" style="display: none">package ds
+		<pre class="file" id="file5" style="display: none">package ds
 
 import (
         "bufio"
@@ -1272,7 +1423,7 @@ func deserializeStringsText(r *bufio.Reader, tag string) ([]string, error) <span
 }
 </pre>
 		
-		<pre class="file" id="file5" style="display: none">package ds
+		<pre class="file" id="file6" style="display: none">package ds
 
 import (
         "bufio"
@@ -1454,7 +1605,7 @@ func (q *Queue) DeserializeText(r *bufio.Reader) error <span class="cov4" title=
 }
 </pre>
 		
-		<pre class="file" id="file6" style="display: none">package ds
+		<pre class="file" id="file7" style="display: none">package ds
 
 import (
         "bufio"
@@ -1474,67 +1625,67 @@ type Tree struct {
         size int
 }
 
-func (t *Tree) Insert(v int) bool <span class="cov5" title="165">{
+func (t *Tree) Insert(v int) bool <span class="cov6" title="171">{
         if v &lt; math.MinInt32 || v &gt; math.MaxInt32 </span><span class="cov1" title="1">{
                 return false
         }</span>
-        <span class="cov5" title="164">n := &amp;treeNode{data: v}
-        if t.root == nil </span><span class="cov3" title="11">{
+        <span class="cov6" title="170">n := &amp;treeNode{data: v}
+        if t.root == nil </span><span class="cov3" title="12">{
                 t.root = n
                 t.size++
                 return true
         }</span>
-        <span class="cov5" title="153">queue := []*treeNode{t.root}
-        for i := 0; i &lt; len(queue); i++ </span><span class="cov8" title="2620">{
+        <span class="cov5" title="158">queue := []*treeNode{t.root}
+        for i := 0; i &lt; len(queue); i++ </span><span class="cov8" title="2629">{
                 cur := queue[i]
-                if cur.left == nil </span><span class="cov5" title="79">{
+                if cur.left == nil </span><span class="cov5" title="82">{
                         cur.left = n
                         t.size++
                         return true
                 }</span>
-                <span class="cov8" title="2541">if cur.right == nil </span><span class="cov5" title="74">{
+                <span class="cov8" title="2547">if cur.right == nil </span><span class="cov5" title="76">{
                         cur.right = n
                         t.size++
                         return true
                 }</span>
-                <span class="cov8" title="2467">queue = append(queue, cur.left, cur.right)</span>
+                <span class="cov8" title="2471">queue = append(queue, cur.left, cur.right)</span>
         }
         <span class="cov0" title="0">return false</span>
 }
-func (t *Tree) IsMember(v int) bool <span class="cov2" title="4">{
+func (t *Tree) IsMember(v int) bool <span class="cov2" title="6">{
         queue := []*treeNode{}
-        if t.root != nil </span><span class="cov2" title="3">{
+        if t.root != nil </span><span class="cov2" title="5">{
                 queue = append(queue, t.root)
         }</span>
-        <span class="cov2" title="4">for i := 0; i &lt; len(queue); i++ </span><span class="cov5" title="115">{
+        <span class="cov2" title="6">for i := 0; i &lt; len(queue); i++ </span><span class="cov5" title="126">{
                 n := queue[i]
-                if n.data == v </span><span class="cov1" title="1">{
+                if n.data == v </span><span class="cov1" title="2">{
                         return true
                 }</span>
-                <span class="cov5" title="114">if n.left != nil </span><span class="cov4" title="60">{
+                <span class="cov5" title="124">if n.left != nil </span><span class="cov5" title="66">{
                         queue = append(queue, n.left)
                 }</span>
-                <span class="cov5" title="114">if n.right != nil </span><span class="cov4" title="58">{
+                <span class="cov5" title="124">if n.right != nil </span><span class="cov5" title="62">{
                         queue = append(queue, n.right)
                 }</span>
         }
-        <span class="cov2" title="3">return false</span>
+        <span class="cov2" title="4">return false</span>
 }
-func (t *Tree) IsComplete() bool <span class="cov5" title="104">{
+func (t *Tree) IsComplete() bool <span class="cov5" title="105">{
         queue := []*treeNode{t.root}
         gap := false
-        for i := 0; i &lt; len(queue); i++ </span><span class="cov10" title="10227">{
+        for i := 0; i &lt; len(queue); i++ </span><span class="cov10" title="10240">{
                 n := queue[i]
-                if n == nil </span><span class="cov9" title="5163">{
+                if n == nil </span><span class="cov9" title="5170">{
                         gap = true
                         continue</span>
                 }
-                <span class="cov9" title="5064">if gap </span><span class="cov1" title="2">{
+                <span class="cov9" title="5070">if gap </span><span class="cov1" title="2">{
                         return false
                 }</span>
-                <span class="cov9" title="5062">queue = append(queue, n.left, n.right)</span>
+                <span class="cov9" title="5068">queue = append(queue, n.left, n.right)</span>
         }
-        <span class="cov5" title="102">return true</span>
+        <span class="cov5" title="103">return true</span>
 }
 func (t *Tree) Clear()      <span class="cov1" title="2">{ *t = Tree{} }</span>
 func (t *Tree) Len() int    <span class="cov5" title="102">{ return t.size }</span>
@@ -1548,23 +1699,23 @@ func (t *Tree) Height() int <span class="cov2" title="3">{
         }</span>
         <span class="cov2" title="3">return h</span>
 }
-func (t *Tree) Items() []int <span class="cov5" title="67">{
+func (t *Tree) Items() []int <span class="cov5" title="68">{
         out := make([]int, 0, t.size)
         queue := []*treeNode{}
-        if t.root != nil </span><span class="cov4" title="38">{
+        if t.root != nil </span><span class="cov4" title="39">{
                 queue = append(queue, t.root)
         }</span>
-        <span class="cov5" title="67">for i := 0; i &lt; len(queue); i++ </span><span class="cov5" title="115">{
+        <span class="cov5" title="68">for i := 0; i &lt; len(queue); i++ </span><span class="cov5" title="121">{
                 n := queue[i]
                 out = append(out, n.data)
-                if n.left != nil </span><span class="cov4" title="40">{
+                if n.left != nil </span><span class="cov4" title="43">{
                         queue = append(queue, n.left)
                 }</span>
-                <span class="cov5" title="115">if n.right != nil </span><span class="cov4" title="37">{
+                <span class="cov5" title="121">if n.right != nil </span><span class="cov4" title="39">{
                         queue = append(queue, n.right)
                 }</span>
         }
-        <span class="cov5" title="67">return out</span>
+        <span class="cov5" title="68">return out</span>
 }
 func (t *Tree) String() string <span class="cov4" title="47">{
         var sb strings.Builder

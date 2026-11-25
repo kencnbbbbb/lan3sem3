@@ -1,1 +1,217 @@
-ok  	laba3/ds	0.822s	coverage: 99.2% of statements
+=== RUN   TestCLI
+Созданы текстовые и бинарные примеры для 8 структур
+=== RUN   TestCLI/Array
+=== RUN   TestCLI/OneLinked
+=== RUN   TestCLI/Linked
+=== RUN   TestCLI/Stack
+=== RUN   TestCLI/Queue
+=== RUN   TestCLI/OpenHash
+=== RUN   TestCLI/LinearHash
+=== RUN   TestCLI/Tree
+lab3 --demo папка
+lab3 --convert Тип text|binary вход text|binary выход
+--- PASS: TestCLI (0.01s)
+    --- PASS: TestCLI/Array (0.00s)
+    --- PASS: TestCLI/OneLinked (0.00s)
+    --- PASS: TestCLI/Linked (0.00s)
+    --- PASS: TestCLI/Stack (0.00s)
+    --- PASS: TestCLI/Queue (0.00s)
+    --- PASS: TestCLI/OpenHash (0.00s)
+    --- PASS: TestCLI/LinearHash (0.00s)
+    --- PASS: TestCLI/Tree (0.00s)
+PASS
+coverage: 85.1% of statements
+ok  	laba3/cmd/lab3	0.379s	coverage: 85.1% of statements
+=== RUN   TestArrayGetSet
+--- PASS: TestArrayGetSet (0.00s)
+=== RUN   TestArrayInsertErase
+--- PASS: TestArrayInsertErase (0.00s)
+=== RUN   TestArrayCapacity
+--- PASS: TestArrayCapacity (0.00s)
+=== RUN   TestArrayClone
+--- PASS: TestArrayClone (0.00s)
+=== RUN   TestOpenHashBasics
+--- PASS: TestOpenHashBasics (0.00s)
+=== RUN   TestOpenHashRehash
+--- PASS: TestOpenHashRehash (0.00s)
+=== RUN   TestOpenHashTombstones
+--- PASS: TestOpenHashTombstones (0.00s)
+=== RUN   TestOpenHashLimits
+--- PASS: TestOpenHashLimits (0.00s)
+=== RUN   TestHashFunctions
+--- PASS: TestHashFunctions (0.00s)
+=== RUN   TestOpenHashClone
+--- PASS: TestOpenHashClone (0.00s)
+=== RUN   TestCompleteTreeLab1Example
+--- PASS: TestCompleteTreeLab1Example (0.00s)
+=== RUN   TestListsPushAndRead
+=== RUN   TestListsPushAndRead/OneLinked
+=== RUN   TestListsPushAndRead/Linked
+--- PASS: TestListsPushAndRead (0.00s)
+    --- PASS: TestListsPushAndRead/OneLinked (0.00s)
+    --- PASS: TestListsPushAndRead/Linked (0.00s)
+=== RUN   TestListsPushAfterBefore
+=== RUN   TestListsPushAfterBefore/OneLinked
+=== RUN   TestListsPushAfterBefore/Linked
+--- PASS: TestListsPushAfterBefore (0.00s)
+    --- PASS: TestListsPushAfterBefore/OneLinked (0.00s)
+    --- PASS: TestListsPushAfterBefore/Linked (0.00s)
+=== RUN   TestListsPops
+=== RUN   TestListsPops/OneLinked
+=== RUN   TestListsPops/Linked
+--- PASS: TestListsPops (0.00s)
+    --- PASS: TestListsPops/OneLinked (0.00s)
+    --- PASS: TestListsPops/Linked (0.00s)
+=== RUN   TestListsDelAndClear
+=== RUN   TestListsDelAndClear/OneLinked
+=== RUN   TestListsDelAndClear/Linked
+--- PASS: TestListsDelAndClear (0.00s)
+    --- PASS: TestListsDelAndClear/OneLinked (0.00s)
+    --- PASS: TestListsDelAndClear/Linked (0.00s)
+=== RUN   TestOneLinkedClone
+--- PASS: TestOneLinkedClone (0.00s)
+=== RUN   TestLinkedClone
+--- PASS: TestLinkedClone (0.00s)
+=== RUN   TestSerializeEmptyRoundTrip
+=== RUN   TestSerializeEmptyRoundTrip/OneLinked
+=== RUN   TestSerializeEmptyRoundTrip/Linked
+=== RUN   TestSerializeEmptyRoundTrip/Stack
+=== RUN   TestSerializeEmptyRoundTrip/Queue
+=== RUN   TestSerializeEmptyRoundTrip/OpenHash
+=== RUN   TestSerializeEmptyRoundTrip/LinearHash
+=== RUN   TestSerializeEmptyRoundTrip/Tree
+=== RUN   TestSerializeEmptyRoundTrip/Array
+--- PASS: TestSerializeEmptyRoundTrip (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/OneLinked (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/Linked (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/Stack (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/Queue (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/OpenHash (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/LinearHash (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/Tree (0.00s)
+    --- PASS: TestSerializeEmptyRoundTrip/Array (0.00s)
+=== RUN   TestSerializeBadBinary
+=== RUN   TestSerializeBadBinary/Stack
+=== RUN   TestSerializeBadBinary/Queue
+=== RUN   TestSerializeBadBinary/OpenHash
+=== RUN   TestSerializeBadBinary/LinearHash
+=== RUN   TestSerializeBadBinary/Tree
+=== RUN   TestSerializeBadBinary/Array
+=== RUN   TestSerializeBadBinary/OneLinked
+=== RUN   TestSerializeBadBinary/Linked
+--- PASS: TestSerializeBadBinary (0.00s)
+    --- PASS: TestSerializeBadBinary/Stack (0.00s)
+    --- PASS: TestSerializeBadBinary/Queue (0.00s)
+    --- PASS: TestSerializeBadBinary/OpenHash (0.00s)
+    --- PASS: TestSerializeBadBinary/LinearHash (0.00s)
+    --- PASS: TestSerializeBadBinary/Tree (0.00s)
+    --- PASS: TestSerializeBadBinary/Array (0.00s)
+    --- PASS: TestSerializeBadBinary/OneLinked (0.00s)
+    --- PASS: TestSerializeBadBinary/Linked (0.00s)
+=== RUN   TestSerializeBadText
+=== RUN   TestSerializeBadText/OneLinked
+=== RUN   TestSerializeBadText/Linked
+=== RUN   TestSerializeBadText/Stack
+=== RUN   TestSerializeBadText/Queue
+=== RUN   TestSerializeBadText/OpenHash
+=== RUN   TestSerializeBadText/LinearHash
+=== RUN   TestSerializeBadText/Tree
+=== RUN   TestSerializeBadText/Array
+--- PASS: TestSerializeBadText (0.00s)
+    --- PASS: TestSerializeBadText/OneLinked (0.00s)
+    --- PASS: TestSerializeBadText/Linked (0.00s)
+    --- PASS: TestSerializeBadText/Stack (0.00s)
+    --- PASS: TestSerializeBadText/Queue (0.00s)
+    --- PASS: TestSerializeBadText/OpenHash (0.00s)
+    --- PASS: TestSerializeBadText/LinearHash (0.00s)
+    --- PASS: TestSerializeBadText/Tree (0.00s)
+    --- PASS: TestSerializeBadText/Array (0.00s)
+=== RUN   TestSerializeFilledRoundTrip
+=== RUN   TestSerializeFilledRoundTrip/Array/binary
+=== RUN   TestSerializeFilledRoundTrip/OneLinked/binary
+=== RUN   TestSerializeFilledRoundTrip/Linked/binary
+=== RUN   TestSerializeFilledRoundTrip/Stack/binary
+=== RUN   TestSerializeFilledRoundTrip/Queue/binary
+=== RUN   TestSerializeFilledRoundTrip/Tree/binary
+=== RUN   TestSerializeFilledRoundTrip/Array/text
+=== RUN   TestSerializeFilledRoundTrip/OneLinked/text
+=== RUN   TestSerializeFilledRoundTrip/Linked/text
+=== RUN   TestSerializeFilledRoundTrip/Stack/text
+=== RUN   TestSerializeFilledRoundTrip/Queue/text
+=== RUN   TestSerializeFilledRoundTrip/Tree/text
+=== RUN   TestSerializeFilledRoundTrip/OpenHash
+--- PASS: TestSerializeFilledRoundTrip (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Array/binary (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/OneLinked/binary (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Linked/binary (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Stack/binary (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Queue/binary (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Tree/binary (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Array/text (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/OneLinked/text (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Linked/text (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Stack/text (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Queue/text (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/Tree/text (0.00s)
+    --- PASS: TestSerializeFilledRoundTrip/OpenHash (0.00s)
+=== RUN   TestPeekTags
+--- PASS: TestPeekTags (0.00s)
+=== RUN   TestPrimitives
+--- PASS: TestPrimitives (0.00s)
+=== RUN   TestWriteIntOverflow
+--- PASS: TestWriteIntOverflow (0.00s)
+=== RUN   TestStackLifo
+--- PASS: TestStackLifo (0.00s)
+=== RUN   TestStackCloneClear
+--- PASS: TestStackCloneClear (0.00s)
+=== RUN   TestQueueFifo
+--- PASS: TestQueueFifo (0.00s)
+=== RUN   TestQueueCloneClear
+--- PASS: TestQueueCloneClear (0.00s)
+=== RUN   TestCompleteTreeOperations
+--- PASS: TestCompleteTreeOperations (0.00s)
+=== RUN   TestCompleteTreeMalformedShapes
+--- PASS: TestCompleteTreeMalformedShapes (0.00s)
+=== RUN   TestCompleteTreeRoundTripAndFailure
+--- PASS: TestCompleteTreeRoundTripAndFailure (0.00s)
+=== RUN   TestBothHashMethods
+--- PASS: TestBothHashMethods (0.00s)
+=== RUN   TestDeserializeAtomic
+=== RUN   TestDeserializeAtomic/LinearHash
+=== RUN   TestDeserializeAtomic/Tree
+=== RUN   TestDeserializeAtomic/Array
+=== RUN   TestDeserializeAtomic/OneLinked
+=== RUN   TestDeserializeAtomic/Linked
+=== RUN   TestDeserializeAtomic/Stack
+=== RUN   TestDeserializeAtomic/Queue
+=== RUN   TestDeserializeAtomic/OpenHash
+--- PASS: TestDeserializeAtomic (0.00s)
+    --- PASS: TestDeserializeAtomic/LinearHash (0.00s)
+    --- PASS: TestDeserializeAtomic/Tree (0.00s)
+    --- PASS: TestDeserializeAtomic/Array (0.00s)
+    --- PASS: TestDeserializeAtomic/OneLinked (0.00s)
+    --- PASS: TestDeserializeAtomic/Linked (0.00s)
+    --- PASS: TestDeserializeAtomic/Stack (0.00s)
+    --- PASS: TestDeserializeAtomic/Queue (0.00s)
+    --- PASS: TestDeserializeAtomic/OpenHash (0.00s)
+=== RUN   TestSerializationIOFailures
+=== RUN   TestSerializationIOFailures/Queue
+=== RUN   TestSerializationIOFailures/OpenHash
+=== RUN   TestSerializationIOFailures/LinearHash
+=== RUN   TestSerializationIOFailures/Tree
+=== RUN   TestSerializationIOFailures/Array
+=== RUN   TestSerializationIOFailures/OneLinked
+=== RUN   TestSerializationIOFailures/Linked
+=== RUN   TestSerializationIOFailures/Stack
+--- PASS: TestSerializationIOFailures (0.00s)
+    --- PASS: TestSerializationIOFailures/Queue (0.00s)
+    --- PASS: TestSerializationIOFailures/OpenHash (0.00s)
+    --- PASS: TestSerializationIOFailures/LinearHash (0.00s)
+    --- PASS: TestSerializationIOFailures/Tree (0.00s)
+    --- PASS: TestSerializationIOFailures/Array (0.00s)
+    --- PASS: TestSerializationIOFailures/OneLinked (0.00s)
+    --- PASS: TestSerializationIOFailures/Linked (0.00s)
+    --- PASS: TestSerializationIOFailures/Stack (0.00s)
+PASS
+coverage: 99.2% of statements
+ok  	laba3/ds	0.654s	coverage: 99.2% of statements

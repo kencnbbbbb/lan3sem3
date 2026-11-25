@@ -15,14 +15,16 @@ coverage: all
 	$(PYTHON) scripts/coverage.py --build $(BUILD)
 coverage-go:
 	mkdir -p reports/go
-	cd golang && go test ./ds -covermode=atomic -coverprofile=../reports/go/coverage.out -count=1
+	cd golang && go test -mod=vendor ./... -covermode=atomic -coverprofile=../reports/go/coverage.out -count=1
 	cd golang && go tool cover -html=../reports/go/coverage.out -o ../reports/go/index.html
 	$(PYTHON) scripts/check_go_coverage.py reports/go/coverage.out
 lint:
 	$(PYTHON) scripts/lint.py
 bench: all
-	./$(BUILD)/benchmarks --benchmark_min_time=0.05s --benchmark_repetitions=3 --benchmark_out=reports/cpp_benchmarks.json --benchmark_out_format=json
-	cd golang && go test ./ds -run '^$$' -bench . -benchmem -benchtime=50ms -count=3
+	./$(BUILD)/benchmarks --benchmark_min_time=0.05s --benchmark_repetitions=3 --benchmark_out=reports/cpp_benchmarks.json --benchmark_out_format=json > reports/cpp_benchmarks.txt 2>&1
+	cat reports/cpp_benchmarks.txt
+	cd golang && go test ./ds -run '^$$' -bench . -benchmem -benchtime=50ms -count=3 > ../reports/go/bench.txt 2>&1
+	cat reports/go/bench.txt
 demo: all
 	./$(BUILD)/lab3 --demo examples/cpp
 	cd golang && go run ./cmd/lab3 --demo ../examples/go

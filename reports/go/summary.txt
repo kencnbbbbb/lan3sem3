@@ -1,3 +1,9 @@
+laba3/cmd/lab3/main.go:13:		create				100.0%
+laba3/cmd/lab3/main.go:34:		write				75.0%
+laba3/cmd/lab3/main.go:53:		convert				95.7%
+laba3/cmd/lab3/main.go:87:		demo				80.6%
+laba3/cmd/lab3/main.go:129:		run				100.0%
+laba3/cmd/lab3/main.go:142:		main				0.0%
 laba3/ds/array.go:20:			NewArray			100.0%
 laba3/ds/array.go:30:			grow				100.0%
 laba3/ds/array.go:44:			ensureSpace			100.0%
@@ -171,4 +177,4 @@ laba3/ds/tree.go:158:			SerializeBinary			100.0%
 laba3/ds/tree.go:173:			DeserializeBinary		100.0%
 laba3/ds/tree.go:193:			SerializeText			100.0%
 laba3/ds/tree.go:205:			DeserializeText			100.0%
-total:					(statements)			99.2%
+total:					(statements)			97.8%

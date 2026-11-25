@@ -1,0 +1,6 @@
+LinearHash 5
+""
+"q\"uote"
+"Привет"
+"alpha"
+"two words"

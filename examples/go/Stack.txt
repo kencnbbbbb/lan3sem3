@@ -1,0 +1,6 @@
+Stack 5
+"alpha"
+"two words"
+""
+"q\"uote"
+"Привет"

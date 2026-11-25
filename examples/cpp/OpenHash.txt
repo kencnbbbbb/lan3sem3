@@ -1,0 +1,6 @@
+OpenHash 5
+""
+"Привет"
+"q\"uote"
+"alpha"
+"two words"

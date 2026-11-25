@@ -1,0 +1,6 @@
+Running 51 test cases...
+
+Test module "AdtBoostTests" has passed with:
+  51 test cases out of 51 passed
+  12283 assertions out of 12283 passed
+

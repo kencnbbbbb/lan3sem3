@@ -1,4 +1,5 @@
 
+
 function next_uncovered(selector, reverse, scroll_selector) {
   function visit_element(element) {
     element.classList.add("seen");

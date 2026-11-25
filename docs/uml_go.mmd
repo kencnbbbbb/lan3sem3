@@ -1,0 +1,125 @@
+classDiagram
+class Serializer {
+ <<interface>>
+ +SerializeBinary(io.Writer) error
+ +DeserializeBinary(io.Reader) error
+ +SerializeText(io.Writer) error
+ +DeserializeText(bufio.Reader) error
+}
+class Array {
+ -[]string data
+ -int size
+ +PushBack(string) error
+ +Insert(int,string) error
+ +Get(int) string,error
+ +Set(int,string) error
+ +Erase(int) error
+ +Clear()
+ +Len() int
+ +Cap() int
+ +Empty() bool
+ +Items() []string
+ +Clone() Array
+}
+class OneLinked {
+ -oneNode head
+ -oneNode tail
+ -int size
+ +PushFront(string)
+ +PushBack(string)
+ +PushBefore(string,string) error
+ +PushAfter(string,string) error
+ +PopFront() string,error
+ +PopBack() string,error
+ +PopBefore(string) string,error
+ +PopAfter(string) string,error
+ +Find(string) int
+ +DelByValue(string) bool
+ +Clone() OneLinked
+}
+class Linked {
+ -twoNode head
+ -twoNode tail
+ -int size
+ +PushFront(string)
+ +PushBack(string)
+ +PushBefore(string,string) error
+ +PushAfter(string,string) error
+ +PopFront() string,error
+ +PopBack() string,error
+ +PopBefore(string) string,error
+ +PopAfter(string) string,error
+ +Find(string) int
+ +DelByValue(string) bool
+ +Clone() Linked
+}
+class Stack {
+ -oneNode head
+ -int size
+ +Push(string)
+ +Pop() string,error
+ +Top() string,error
+ +Clone() Stack
+}
+class Queue {
+ -oneNode head
+ -oneNode tail
+ -int size
+ +Push(string)
+ +Pop() string,error
+ +Front() string,error
+ +Clone() Queue
+}
+class OpenHash {
+ -[]slot slots
+ -int size
+ -int deleted
+ -bool linear
+ +Insert(string) bool,error
+ +Erase(string) bool
+ +Find(string) int
+ +Contains(string) bool
+ +Method() string
+ +Clone() OpenHash
+}
+class Tree {
+ -treeNode root
+ -int size
+ +Insert(int) bool
+ +IsMember(int) bool
+ +IsComplete() bool
+ +Len() int
+ +Height() int
+ +Clear()
+ +Items() []int
+ +Structure() string
+ +Clone() Tree
+}
+class oneNode {
+ -string data
+ -oneNode next
+}
+class twoNode {
+ -string data
+ -twoNode next
+ -twoNode prev
+}
+class treeNode {
+ -int data
+ -treeNode left
+ -treeNode right
+}
+Serializer <|.. Array
+Serializer <|.. OneLinked
+Serializer <|.. Linked
+Serializer <|.. Stack
+Serializer <|.. Queue
+Serializer <|.. OpenHash
+Serializer <|.. Tree
+OneLinked *-- oneNode
+Stack *-- oneNode
+Queue *-- oneNode
+Linked *-- twoNode
+Tree *-- treeNode
+note for Serializer "Implicit method-set implementation; private fields are hidden outside package ds"
+note for OpenHash "NewOpenHash: double hashing; NewLinearHash: linear probing"

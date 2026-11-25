@@ -71,6 +71,35 @@ def main():
                     assert dest.read_bytes() == b"KEEP"
                 bad.write_bytes(raw + b"EXTRA")
                 call(exe, "--convert", kind, "binary", bad, "binary", dest, ok=False)
+        # Independent input datasets: empty, singleton and 32 values.
+        # Text format quotes only backslash and quote, like C++ std::quoted.
+        import random
+        rng = random.Random(325)
+        for kind in KINDS:
+            for n in (0, 1, 32):
+                if kind == "Tree":
+                    values = ([0, -2147483648, 2147483647, -2, 20, 20] +
+                              [rng.randint(-1000, 1000) for _ in range(32)])[:n]
+                    sample = "CompleteTree " + str(n) + "\n" + "".join(str(v) + "\n" for v in values)
+                else:
+                    values = (["", "two words", 'a"b', "Привет", "a\\b", "same", "same"] +
+                              [str(rng.randint(0, 100000)) for _ in range(32)])[:n]
+                    if kind in ("OpenHash", "LinearHash"):
+                        values = list(dict.fromkeys(values))
+                    tag = {"OneLinked": "OneLinkedList", "Linked": "LinkedList"}.get(kind, kind)
+                    sample = tag + " " + str(len(values)) + "\n"
+                    sample += "".join('"' + v.replace('\\', '\\\\').replace('"', '\\"') + '"\n' for v in values)
+                source = root / "independent.txt"
+                source.write_bytes(sample.encode())
+                expected = canonical(source.read_bytes(), kind)
+                binaries = []
+                for exe in (cpp, go):
+                    dest, restored = root / "independent.bin", root / "restored.txt"
+                    call(exe, "--convert", kind, "text", source, "binary", dest)
+                    call(exe, "--convert", kind, "binary", dest, "text", restored)
+                    assert canonical(restored.read_bytes(), kind) == expected, (kind, n)
+                    binaries.append(canonical(dest.read_bytes(), kind, True))
+                assert binaries[0] == binaries[1], (kind, n, "C++ vs Go")
         # Text strings with NUL, multiline content and escaped quotes, also UTF-8.
         sample = 'Array 4\n"line1\nline2"\n"nul\x00inside"\n"a\\\\b\\\"c"\n"тест"\n'
         text = root / "special.txt"; text.write_bytes(sample.encode())

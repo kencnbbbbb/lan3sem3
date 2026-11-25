@@ -1,0 +1,8 @@
+PASS: C++ text -> binary -> Go text; identical bytes
+CompleteTree 6
+10
+5
+20
+3
+7
+15
