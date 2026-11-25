@@ -150,3 +150,57 @@ func BenchmarkLinearHashInsert(b *testing.B) {
 		}
 	})
 }
+
+// Same insert-at-front workload as BM_ArrayInsertFront in C++.
+func BenchmarkArrayInsertFront(b *testing.B) {
+	runSizes(b, func(b *testing.B, keys []string) {
+		for i := 0; i < b.N; i++ {
+			a, _ := NewArray(0)
+			for _, key := range keys {
+				if err := a.Insert(0, key); err != nil {
+					b.Fatal(err)
+				}
+			}
+		}
+	})
+}
+
+// Setup is excluded, as with PauseTiming/ResumeTiming in C++.
+func BenchmarkOneLinkedPopBack(b *testing.B) {
+	runSizes(b, func(b *testing.B, keys []string) {
+		for i := 0; i < b.N; i++ {
+			b.StopTimer()
+			list := &OneLinked{}
+			for _, key := range keys {
+				list.PushBack(key)
+			}
+			b.StartTimer()
+			for !list.Empty() {
+				if _, err := list.PopBack(); err != nil {
+					b.Fatal(err)
+				}
+			}
+		}
+	})
+}
+
+func BenchmarkLinkedPopBack(b *testing.B) {
+	for _, n := range []int{100, 1000} {
+		keys := benchKeys(n)
+		b.Run("N="+strconv.Itoa(n), func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				b.StopTimer()
+				list := &Linked{}
+				for _, key := range keys {
+					list.PushBack(key)
+				}
+				b.StartTimer()
+				for !list.Empty() {
+					if _, err := list.PopBack(); err != nil {
+						b.Fatal(err)
+					}
+				}
+			}
+		})
+	}
+}

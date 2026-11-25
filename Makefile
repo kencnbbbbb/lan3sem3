@@ -2,7 +2,7 @@ CMAKE ?= cmake
 PYTHON ?= python3
 CXX = clang++
 BUILD ?= build
-.PHONY: all configure test test-go coverage coverage-go lint bench demo verify clean
+.PHONY: all configure test test-go coverage coverage-go lint bench demo verify parity clean
 all: configure
 	$(CMAKE) --build $(BUILD) --parallel 4
 configure:
@@ -28,8 +28,10 @@ bench: all
 demo: all
 	./$(BUILD)/lab3 --demo examples/cpp
 	cd golang && go run ./cmd/lab3 --demo ../examples/go
-verify: coverage coverage-go test-go lint
-	cd golang && go build -o ../$(BUILD)/lab3-go ./cmd/lab3
+parity:
+	$(PYTHON) scripts/semantic_parity.py --build $(BUILD)/parity --cxx $(CXX)
+verify: coverage coverage-go test-go lint parity
+	cd golang && go build -mod=vendor -o "$(abspath $(BUILD))/lab3-go" ./cmd/lab3
 	$(PYTHON) scripts/cross_language_test.py --cpp $(BUILD)/lab3 --go $(BUILD)/lab3-go
 clean:
 	rm -rf $(BUILD)

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="test_catch2" errors="0" failures="0" skipped="0" tests="12283" hostname="tbd" time="0.080" timestamp="2026-11-25T11:48:36Z">
+  <testsuite name="test_catch2" errors="0" failures="0" skipped="0" tests="12283" hostname="tbd" time="0.022" timestamp="2026-11-25T12:18:47Z">
     <properties>
-      <property name="random-seed" value="3083439756"/>
+      <property name="random-seed" value="2852101128"/>
     </properties>
     <testcase classname="test_catch2.global" name="Lists push and read - OneLinked" time="0.000" status="run"/>
     <testcase classname="test_catch2.global" name="Lists push and read - Linked" time="0.000" status="run"/>
@@ -34,8 +34,8 @@
     <testcase classname="test_catch2.global" name="Array/serialization" time="0.000" status="run"/>
     <testcase classname="test_catch2.global" name="OpenHash" time="0.000" status="run"/>
     <testcase classname="test_catch2.global" name="OpenHash/insert erase contains" time="0.000" status="run"/>
-    <testcase classname="test_catch2.global" name="OpenHash/rehash and tombstones" time="0.001" status="run"/>
-    <testcase classname="test_catch2.global" name="OpenHash/capacity limits" time="0.057" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash/rehash and tombstones" time="0.000" status="run"/>
+    <testcase classname="test_catch2.global" name="OpenHash/capacity limits" time="0.012" status="run"/>
     <testcase classname="test_catch2.global" name="OpenHash/hash functions" time="0.000" status="run"/>
     <testcase classname="test_catch2.global" name="OpenHash/copy assign serialize" time="0.000" status="run"/>
     <testcase classname="test_catch2.global" name="Serialization errors - Array" time="0.000" status="run"/>
@@ -66,9 +66,9 @@
     <testcase classname="test_catch2.global" name="Serialization errors - Tree/empty round trip" time="0.000" status="run"/>
     <testcase classname="test_catch2.global" name="Serialization errors - Tree/bad binary" time="0.000" status="run"/>
     <testcase classname="test_catch2.global" name="Serialization errors - Tree/bad text" time="0.000" status="run"/>
-    <testcase classname="test_catch2.global" name="Complete tree personal variant" time="0.002" status="run"/>
-    <testcase classname="test_catch2.global" name="Both hash methods personal variant" time="0.009" status="run"/>
-    <testcase classname="test_catch2.global" name="Serialization IO failures" time="0.008" status="run"/>
+    <testcase classname="test_catch2.global" name="Complete tree personal variant" time="0.001" status="run"/>
+    <testcase classname="test_catch2.global" name="Both hash methods personal variant" time="0.004" status="run"/>
+    <testcase classname="test_catch2.global" name="Serialization IO failures" time="0.003" status="run"/>
     <system-out/>
     <system-err/>
   </testsuite>

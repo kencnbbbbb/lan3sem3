@@ -30,8 +30,8 @@ Running main() from /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-
 [ RUN      ] Array.ConstructorWithCapacity
 [       OK ] Array.ConstructorWithCapacity (0 ms)
 [ RUN      ] Array.MaxCapacity
-[       OK ] Array.MaxCapacity (1 ms)
-[----------] 3 tests from Array (1 ms total)
+[       OK ] Array.MaxCapacity (0 ms)
+[----------] 3 tests from Array (0 ms total)
 
 [----------] 11 tests from HashTest/0, where TypeParam = OpenHash
 [ RUN      ] HashTest/0.InsertContains
@@ -64,19 +64,19 @@ Running main() from /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-
 [ RUN      ] OpenHash.FindReturnsIndex
 [       OK ] OpenHash.FindReturnsIndex (0 ms)
 [ RUN      ] OpenHash.GrowsAndOverflows
-[       OK ] OpenHash.GrowsAndOverflows (65 ms)
+[       OK ] OpenHash.GrowsAndOverflows (11 ms)
 [ RUN      ] OpenHash.TombstonesTriggerRehash
 [       OK ] OpenHash.TombstonesTriggerRehash (0 ms)
 [ RUN      ] OpenHash.HashFunctions
 [       OK ] OpenHash.HashFunctions (0 ms)
-[----------] 5 tests from OpenHash (65 ms total)
+[----------] 5 tests from OpenHash (11 ms total)
 
 [----------] 2 tests from PersonalVariant
 [ RUN      ] PersonalVariant.BothHashMethods
-[       OK ] PersonalVariant.BothHashMethods (7 ms)
+[       OK ] PersonalVariant.BothHashMethods (3 ms)
 [ RUN      ] PersonalVariant.SerializationIOFailures
-[       OK ] PersonalVariant.SerializationIOFailures (6 ms)
-[----------] 2 tests from PersonalVariant (14 ms total)
+[       OK ] PersonalVariant.SerializationIOFailures (2 ms)
+[----------] 2 tests from PersonalVariant (6 ms total)
 
 [----------] 18 tests from ListTest/0, where TypeParam = OneLinked
 [ RUN      ] ListTest/0.operations
@@ -121,7 +121,7 @@ Running main() from /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-
 [ RUN      ] ListTest/1.operations
 [       OK ] ListTest/1.operations (0 ms)
 [ RUN      ] ListTest/1.serdeser_text
-[       OK ] ListTest/1.serdeser_text (2 ms)
+[       OK ] ListTest/1.serdeser_text (0 ms)
 [ RUN      ] ListTest/1.serdeser_binary
 [       OK ] ListTest/1.serdeser_binary (0 ms)
 [ RUN      ] ListTest/1.PushFrontBackRead
@@ -154,7 +154,7 @@ Running main() from /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-
 [       OK ] ListTest/1.SerializeBinaryRoundTrip (0 ms)
 [ RUN      ] ListTest/1.SerializeTextRoundTrip
 [       OK ] ListTest/1.SerializeTextRoundTrip (0 ms)
-[----------] 18 tests from ListTest/1 (2 ms total)
+[----------] 18 tests from ListTest/1 (0 ms total)
 
 [----------] 6 tests from Queue
 [ RUN      ] Queue.FifoOrder
@@ -317,5 +317,5 @@ Running main() from /Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-
 [----------] 1 test from CompleteTree (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 132 tests from 17 test suites ran. (85 ms total)
+[==========] 132 tests from 17 test suites ran. (22 ms total)
 [  PASSED  ] 132 tests.

@@ -1,0 +1,9 @@
+PASS: Array: 1180 operations + state comparisons to Python reference
+PASS: OneLinked: 1180 operations + state comparisons to Python reference
+PASS: Linked: 1180 operations + state comparisons to Python reference
+PASS: Stack: 1180 operations + state comparisons to Python reference
+PASS: Queue: 1180 operations + state comparisons to Python reference
+PASS: OpenHash: 1180 operations + state comparisons to Python reference
+PASS: LinearHash: 1180 operations + state comparisons to Python reference
+PASS: Tree: 1180 operations + state comparisons to Python reference
+PASS: 9440 operation steps; C++ == Go == reference; 8 structure/mode cases

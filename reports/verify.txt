@@ -1,0 +1,91 @@
+/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/work/python3deps/cmake/data/bin/cmake -S . -B /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build -DCMAKE_CXX_COMPILER=clang++ -DLAB3_COVERAGE=ON
+-- Google Benchmark version: v1.9.4, normalized to 1.9.4
+-- Enabling additional flags: -DINCLUDE_DIRECTORIES=/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/work/deps3/benchmark/include
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES -- success
+-- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX -- success
+-- Performing Test HAVE_STEADY_CLOCK -- success
+-- Performing Test HAVE_PTHREAD_AFFINITY -- failed to compile
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build
+/Users/maximbeliakov/Documents/Codex/2026-11-02/1-2-go-rust-3-4-4/work/python3deps/cmake/data/bin/cmake --build /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build --parallel 4
+[  1%] Built target gtest
+[  7%] Built target adt
+[  8%] Built target gmock
+[ 13%] Built target adt_bench
+[ 24%] Built target benchmark
+[ 26%] Built target lab3
+[ 27%] Built target gtest_main
+[ 28%] Built target benchmarks
+[ 29%] Built target test_boost
+[ 30%] Built target gmock_main
+[ 32%] Built target benchmark_main
+[ 37%] Built target test_gtest
+[ 98%] Built target Catch2
+[ 99%] Built target Catch2WithMain
+[100%] Built target test_catch2
+/Users/maximbeliakov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/coverage.py --build /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build
+gtest: 99.72% lines
+boost: 99.45% lines
+catch2: 99.45% lines
+mkdir -p reports/go
+cd golang && go test -mod=vendor ./... -covermode=atomic -coverprofile=../reports/go/coverage.out -count=1
+ok  	laba3/cmd/lab3	0.274s	coverage: 85.1% of statements
+ok  	laba3/ds	0.500s	coverage: 99.2% of statements
+cd golang && go tool cover -html=../reports/go/coverage.out -o ../reports/go/index.html
+/Users/maximbeliakov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/check_go_coverage.py reports/go/coverage.out
+laba3/cmd/lab3/main.go: 74/87 = 85.06%
+laba3/ds/array.go: 78/79 = 98.73%
+laba3/ds/hash.go: 107/108 = 99.07%
+laba3/ds/linked_list.go: 106/106 = 100.00%
+laba3/ds/one_linked_list.go: 117/118 = 99.15%
+laba3/ds/serialize.go: 158/160 = 98.75%
+laba3/ds/stack_queue.go: 80/80 = 100.00%
+laba3/ds/tree.go: 128/129 = 99.22%
+TOTAL: 848/867 = 97.81%
+cd golang && go test ./... -count=1
+ok  	laba3/cmd/lab3	0.268s
+ok  	laba3/ds	0.496s
+/Users/maximbeliakov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/lint.py
+Clang analyzer: array.cpp
+Clang analyzer: linked_list.cpp
+Clang analyzer: one_linked_list.cpp
+Clang analyzer: open_hash.cpp
+Clang analyzer: queue.cpp
+Clang analyzer: serialize.cpp
+Clang analyzer: stack.cpp
+Clang analyzer: tree.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/main.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/array.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/array.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/linked_list.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/linked_list.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/one_linked_list.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/one_linked_list.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/open_hash.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/open_hash.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/queue.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/queue.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/serializable.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/serialize.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/serialize.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/stack.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/stack.h
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/tree.cpp
+Done processing /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/github_publish/str/tree.h
+PASS: static analysis and configured style checks
+/Users/maximbeliakov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/semantic_parity.py --build /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build/parity --cxx clang++
+PASS: Array: 1180 operations + state comparisons to Python reference
+PASS: OneLinked: 1180 operations + state comparisons to Python reference
+PASS: Linked: 1180 operations + state comparisons to Python reference
+PASS: Stack: 1180 operations + state comparisons to Python reference
+PASS: Queue: 1180 operations + state comparisons to Python reference
+PASS: OpenHash: 1180 operations + state comparisons to Python reference
+PASS: LinearHash: 1180 operations + state comparisons to Python reference
+PASS: Tree: 1180 operations + state comparisons to Python reference
+PASS: 9440 operation steps; C++ == Go == reference; 8 structure/mode cases
+cd golang && go build -mod=vendor -o "/Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build/lab3-go" ./cmd/lab3
+/Users/maximbeliakov/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/cross_language_test.py --cpp /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build/lab3 --go /Users/maximbeliakov/Documents/Codex/2026-11-25/3-docx-users-maximbeliakov-downloads-3/work/audit_two_languages/build/lab3-go
+PASS: 1450 process checks, all 8 structures, both directions and formats

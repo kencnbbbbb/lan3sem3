@@ -22,8 +22,8 @@ class Array {
  +Clone() Array
 }
 class OneLinked {
- -oneNode head
- -oneNode tail
+ -*oneNode head
+ -*oneNode tail
  -int size
  +PushFront(string)
  +PushBack(string)
@@ -38,8 +38,8 @@ class OneLinked {
  +Clone() OneLinked
 }
 class Linked {
- -twoNode head
- -twoNode tail
+ -*twoNode head
+ -*twoNode tail
  -int size
  +PushFront(string)
  +PushBack(string)
@@ -54,7 +54,7 @@ class Linked {
  +Clone() Linked
 }
 class Stack {
- -oneNode head
+ -*oneNode head
  -int size
  +Push(string)
  +Pop() string,error
@@ -62,8 +62,8 @@ class Stack {
  +Clone() Stack
 }
 class Queue {
- -oneNode head
- -oneNode tail
+ -*oneNode head
+ -*oneNode tail
  -int size
  +Push(string)
  +Pop() string,error
@@ -83,7 +83,7 @@ class OpenHash {
  +Clone() OpenHash
 }
 class Tree {
- -treeNode root
+ -*treeNode root
  -int size
  +Insert(int) bool
  +IsMember(int) bool
@@ -97,17 +97,17 @@ class Tree {
 }
 class oneNode {
  -string data
- -oneNode next
+ -*oneNode next
 }
 class twoNode {
  -string data
- -twoNode next
- -twoNode prev
+ -*twoNode next
+ -*twoNode prev
 }
 class treeNode {
  -int data
- -treeNode left
- -treeNode right
+ -*treeNode left
+ -*treeNode right
 }
 Serializer <|.. Array
 Serializer <|.. OneLinked
